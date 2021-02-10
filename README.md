@@ -15,6 +15,7 @@ This project was bootstrapped with [Frontity](https://frontity.org/).
 npx frontity dev
 ```
 
+
 Runs the app in development mode. Open http://localhost:3000 to view it in the browser.
 
 The site will automatically reload if you make changes inside the `packages` folder. You will see the build errors in the console.
