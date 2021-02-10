@@ -38,6 +38,12 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+    post {
+            always {
+            discordSend description: 'Jenkins Pipeline Build', footer:  'Service is available at ' , link: env.BUILD_URL, result: currentBuild.currentResult, unstable: false, title: JOB_NAME, webhookURL: 'https://discord.com/api/webhooks/802805165312180244/IMa1zO16q2EKrWBQhzMzaALgEL7hSKsneIpcgB6hpjhrLcD1zbP_QWlJoegwKPqaiFlk'
+            }
+    }
+
     stages {
         stage('Prepare workspace') {
             steps {
@@ -48,12 +54,6 @@ pipeline {
 
                 // Checkout git
                 checkout scm
-            }
-        }
-
-    post {
-            always {
-            discordSend description: 'Jenkins Pipeline Build', footer:  'Service is available at ' , link: env.BUILD_URL, result: currentBuild.currentResult, unstable: false, title: JOB_NAME, webhookURL: 'https://discord.com/api/webhooks/802805165312180244/IMa1zO16q2EKrWBQhzMzaALgEL7hSKsneIpcgB6hpjhrLcD1zbP_QWlJoegwKPqaiFlk'
             }
         }
 
