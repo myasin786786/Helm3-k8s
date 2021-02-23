@@ -1,36 +1,53 @@
 import { connect, styled, decode } from "frontity";
-import Item from "./list-item";
-import Pagination from "./pagination";
+// import Item from "./list-item";
+// import Pagination from "./pagination";
+import MainBanner from './../MainBanner/MainBanner';
+import AntliaEcosystem from './../AntliaEcosystem/AntliaEcosystem';
+import Consensus from './../Consensus/Consensus';
+import DevTools from './../DevTools/DevTools';
+import Interoperable from './../Interoperable/Interoperable';
+import SmartContract from './../SmartContract/SmartContract';
+import ANACoin from './../ANACoin/ANACoin';
+import TechnicalRoadMap from './../TechnicalRoadmap/TechnicalRoadmap';
+// import Footer from './../Footer/Footer';
 
 const List = ({ state }) => {
   // Get the data of the current list.
   const data = state.source.get(state.router.link);
 
   return (
-    <Container>
-      {/* If the list is a taxonomy, we render a title. */}
-      {data.isTaxonomy && (
-        <Header>
-          {data.taxonomy}:{" "}
-          <b>{decode(state.source[data.taxonomy][data.id].name)}</b>
-        </Header>
-      )}
+    <>
+      <MainBanner />
+      <AntliaEcosystem />
+      <Consensus />
+      <Interoperable />
+      <DevTools />
+      <SmartContract />
+      <ANACoin />
+      <TechnicalRoadMap />
+      {/* <Footer /> */}
+    </>
+    // <Container>
+    //   {data.isTaxonomy && (
+    //     <Header>
+    //       {data.taxonomy}:{" "}
+    //       <b>{decode(state.source[data.taxonomy][data.id].name)}</b>
+    //     </Header>
+    //   )}
 
-      {/* If the list is for a specific author, we render a title. */}
-      {data.isAuthor && (
-        <Header>
-          Author: <b>{decode(state.source.author[data.id].name)}</b>
-        </Header>
-      )}
+    //   {data.isAuthor && (
+    //     <Header>
+    //       Author: <b>{decode(state.source.author[data.id].name)}</b>
+    //     </Header>
+    //   )}
 
-      {/* Iterate over the items of the list. */}
-      {data.items.map(({ type, id }) => {
-        const item = state.source[type][id];
-        // Render one Item component for each one.
-        return <Item key={item.id} item={item} />;
-      })}
-      <Pagination />
-    </Container>
+    //   {data.items.map(({ type, id }) => {
+    //     const item = state.source[type][id];
+
+    //     return <Item key={item.id} item={item} />;
+    //   })}
+    //   <Pagination />
+    // </Container>
   );
 };
 

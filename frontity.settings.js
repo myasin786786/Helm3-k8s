@@ -2,9 +2,9 @@ const settings = {
   "name": "antlia-web-frontity",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://antlia.io/",
+      "title": "ANTLIA - Beyond Interchange & Oracles",
+      "description": "we Antlia blockchain work on interchain and oracles, smart contracts, Rollover Proof of Stake (rPoS) and are interoperable."
     }
   },
   "packages": [
