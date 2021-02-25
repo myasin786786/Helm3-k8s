@@ -4,7 +4,8 @@ import sccoins from '../../assets/sc-coins.png';
 import scdottedline from '../../assets/sc-dotted-line.png';
 import circle from '../../assets/circle.png';
 // import dot from '../../assets/react.png';
-import scres from '../../assets/sc-res.png';
+import deskview from '../../assets/sc-res.png';
+// import scres from '../../assets/SmartContract1.png';
 // import { Link } from "react-scroll";
 
 // const text1 = "Antlia oracles are built using web assembly based smart contracts. Antlia oracles can facilitate the transparent and trussless execution of smart contracts"
@@ -38,7 +39,7 @@ class SmartContract extends React.Component {
                     {/* {
                       show ? <p>{text2}</p> : <p>{text1}</p>
                     }
-                    <button className="showBtn" onClick={this.changeShow}>{show ? <>Show Less <i class="fa fa-angle-up" aria-hidden="true"></i></> : <>Show More <i class="fa fa-angle-down" aria-hidden="true"></i></>}</button> */}
+                    <button className="showBtn" onClick={this.changeShow}>{show ? <>Show Less <i className="fa fa-angle-up" aria-hidden="true"></i></> : <>Show More <i className="fa fa-angle-down" aria-hidden="true"></i></>}</button> */}
                     <p>Antlia oracles are built using web assembly based smart contracts. Antlia oracles can facilitate the transparent and trussless execution of smart contracts to bring data in and out of blockchain.</p>
                     <a
                       href="https://docs.antlia.io/"
@@ -65,12 +66,13 @@ class SmartContract extends React.Component {
                     alt="Circle"
                   />
                   <div className="globe">
-                    <div class="tech-slideshow">
-                      <div class="mover-1"></div>
-                      <div class="mover-1"></div>
+                    <div className="tech-slideshow">
+                      <div className="mover-1"></div>
+                      <div className="mover-1"></div>
                     </div>
                   </div>
-                  <img src={scres} alt="Smart Contract" className="res-view" />
+                  {/* <img src={scres} alt="Smart Contract" className="res-view" /> */}
+                  <img src={deskview} alt="Smart Contract" className="res-view" />
                   <img src={scdottedline} alt="Smart Contract" className="sc-dot-line" />
                   <img src={sccoins} alt="Smart Contract" className="sc-coins" />
                 </div>

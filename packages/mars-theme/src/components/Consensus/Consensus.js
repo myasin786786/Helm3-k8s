@@ -47,17 +47,17 @@ class Consensus extends React.Component {
                   <img src={ConsensusEngine} alt="Consensus Engine" />
                   {/* <img src={ConsensusEngineMain} className="engine-img" alt="Consensus Engine" /> */}
                   {/* <img src={centerlines}  className="cl-img" alt="Consensus Engine" /> */}
-                  {/* <div class="bubble-wrap">
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
-                    <div class="bubble"></div>
+                  {/* <div className="bubble-wrap">
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
+                    <div className="bubble"></div>
                   </div> */}
                   <div className="dot-container">
                     <div className="dot-in">
@@ -101,7 +101,7 @@ at every 05 blocks proposal. */}
                     {/* {
                       show ? <p>{text2}</p> : <p>{text1}</p>
                     } */}
-                    {/* <button className="showBtn" onClick={this.changeShow}>{show ? <>Show Less <i class="fa fa-angle-up" aria-hidden="true"></i></> : <>Show More <i class="fa fa-angle-down" aria-hidden="true"></i></>}</button> */}
+                    {/* <button className="showBtn" onClick={this.changeShow}>{show ? <>Show Less <i className="fa fa-angle-up" aria-hidden="true"></i></> : <>Show More <i className="fa fa-angle-down" aria-hidden="true"></i></>}</button> */}
                     {/* <Link to="#">Show Less */}
                     {/* <i className="fa fa-external-link" aria-hidden="true"></i> */}
                     {/* </Link> */}

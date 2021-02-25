@@ -54,7 +54,7 @@ class Footer extends React.Component {
                 {/* <div className="footer-item">
                       <h4>Company</h4>
                       <ul>
-                        <li><NavLink link="#" spy={true} smooth={true} duration={500}>Team</NavLink></li>
+                        <li><NavLink link="#" spy={"true"} smooth={"true"} duration={500}>Team</NavLink></li>
                         <li><Link link="#">Advisors</Link></li>
                         <li><a href="https://www.rnssol.com/careers" target="_blank" rel="noopener noreferrer">Careers</a></li>
                         <li><Link link="/">Privacy Policy</Link></li>
@@ -67,8 +67,8 @@ class Footer extends React.Component {
                     <li><a href="https://docs.antlia.io/antlia-litepaper" target="_blank" rel="noopener noreferrer">Litepaper</a></li>
                     <li><a href="https://medium.com/@rnssol" target="_blank" rel="noopener noreferrer" >Blogs</a></li>
                     {/* <li><a href="https://antliablockchain.medium.com/" target="_blank" rel="noopener noreferrer" >Blogs</a></li> */}
-                    {/* <li><Link link="/blog" onClick={scrollToTop} spy={true} smooth={true} duration={500}>Blogs</Link></li> */}
-                    <li><Link link="/events" onClick={scrollToTop} spy={true} smooth={true} duration={500}>Media Kit</Link></li>
+                    {/* <li><Link link="/blog" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Blogs</Link></li> */}
+                    <li><Link link="/events" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Media Kit</Link></li>
                     <li><a href="https://discord.gg/uH497RVZNA" target="_blank" rel="noopener noreferrer">Community</a></li>
                   </ul>
                 </div>
@@ -81,7 +81,7 @@ class Footer extends React.Component {
                     <li><Link link="/antlia-defi">DeFi</Link></li>
                     {/* <li><Link link="/">Roadmap</Link></li> */}
                     <li><a href="https://forms.gle/Bzp9ocmRzd4yisJC9" target="_blank" rel="noopener noreferrer">Validators</a></li>
-                    {/* <li><Link link="/validator" onClick={scrollToTop} spy={true} smooth={true} duration={500}>Validators</Link></li> */}
+                    {/* <li><Link link="/validator" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Validators</Link></li> */}
                     {/* <li><Link link="/">Developers</Link></li> */}
                   </ul>
                 </div>
@@ -107,7 +107,7 @@ class Footer extends React.Component {
                     {/* <li><Link link="/">Terms</Link></li> */}
                     {/* <li><Link link="/">Roadmap</Link></li> */}
                     {/* <li><Link link="/">Disclaimer</Link></li> */}
-                    <li><Link link="/privacypolicy" onClick={scrollToTop} spy={true} smooth={true} duration={500}>Privacy Policy</Link></li>
+                    <li><Link link="/privacypolicy" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Privacy Policy</Link></li>
                     <li><Link link="/">contact@antlia.io</Link></li>
                   </ul>
                 </div>

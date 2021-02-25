@@ -26,10 +26,10 @@ const StakeFlow = () => {
                             <div>
                                 <h1>World's First Cross-chain Money Market</h1>
                                 <p> Lend, borrow and earn with your crypto now. </p>
-                                <Link link="/wallet"  onClick={scrollToTop} spy={true} smooth={true} duration={500} className="connect-link">Connect Wallet &nbsp;
+                                <Link link="/wallet"  onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500} className="connect-link">Connect Wallet &nbsp;
                       <i className="fa fa-arrow-right" aria-hidden="true"></i>
                                 </Link>
-                                <Link link="/wallet" onClick={scrollToTop} spy={true} smooth={true} duration={500} className="simple-link">Connect without Wallet &nbsp;
+                                <Link link="/wallet" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500} className="simple-link">Connect without Wallet &nbsp;
                       <i className="fa fa-arrow-right" aria-hidden="true"></i>
                                 </Link>
                             </div>

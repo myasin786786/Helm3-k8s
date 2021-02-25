@@ -96,8 +96,8 @@ class MainNavbar extends React.Component {
           <Navbar id="navbar" light expand="md">
             <div className="container">
               <NavbarBrand tag={Link} link={"/"} onClick={scrollToTop}>
-                <img src={logo} alt="RNS logo" className="logodes" />
-                <img src={logo1} alt="RNS logo" className="logores" />
+                <img src={logo} alt="Antlia logo" className="logodes" />
+                <img src={logo1} alt="Antlia logo" className="logores" />
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
@@ -110,8 +110,8 @@ class MainNavbar extends React.Component {
                       //   this.toggleClose();
                       // }}
                       onClick={scrollToTop}
-                      spy={true}
-                      smooth={true}
+                      spy={"true"}
+                      smooth={"true"}
                       duration={500}
                     >
                       Technology
@@ -121,8 +121,8 @@ class MainNavbar extends React.Component {
                     <Link
                       link="/stakeflow"
                       onClick={scrollToTop}
-                      spy={true}
-                      smooth={true}
+                      spy={"true"}
+                      smooth={"true"}
                       duration={500}
                     // className="isDisabled"
                     >
@@ -133,8 +133,8 @@ class MainNavbar extends React.Component {
                     <Link
                       link="/investment"
                       onClick={scrollToTop}
-                      spy={true}
-                      smooth={true}
+                      spy={"true"}
+                      smooth={"true"}
                       duration={500}
                     >
                       Investment
@@ -144,8 +144,8 @@ class MainNavbar extends React.Component {
                     <Link
                       link="/aboutus"
                       onClick={scrollToTop}
-                      spy={true}
-                      smooth={true}
+                      spy={"true"}
+                      smooth={"true"}
                       duration={500}
                     >
                       About Us
@@ -207,8 +207,8 @@ class MainNavbar extends React.Component {
                       onClick={() => {
                         this.toggleClose();
                       }}
-                      spy={true}
-                      smooth={true}
+                      spy={"true"}
+                      smooth={"true"}
                       duration={500} className="contactbtn">
                       Contact
                     </NavLink>

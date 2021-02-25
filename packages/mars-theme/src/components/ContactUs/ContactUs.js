@@ -5,6 +5,9 @@ import { Row, Col, Form, FormGroup, Input, Label, Button } from "reactstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 // import Loader from "react-loaders";
 import validate from "validate.js";
+import { toast } from "react-toastify";
+import { ApiUrl } from "../../store/config";
+import axios from "axios";
 // import { FormattedMessage } from "react-intl";
 // import { injectIntl } from "react-intl";
 
@@ -146,31 +149,61 @@ class ContactUs extends React.Component {
       country: this.state.country,
       phonenumber: this.state.phone,
     };
-    this.props.userContactHandler(data);
-    setTimeout(() => {
-      this.setState({
-        name: "",
-        email: "",
-        subject: "",
-        code: "--",
-        message: "",
-        selectedCountry: "",
-        phone: "",
-        value: "",
-        countryCode: "",
-        errors: {},
-        touched: {
-          email: false,
-          name: false,
-          subject: false,
-          message: false,
-          selectedCountry: false,
-          phone: false,
-          value: false,
-          countryCode: false,
-        },
+    // this.props.userContactHandler(data);
+    axios
+      .post(ApiUrl + "rnsadmin/contactAdd", data)
+      .then((res) => {
+        this.setState({
+          name: "",
+          email: "",
+          subject: "",
+          code: "--",
+          message: "",
+          selectedCountry: "",
+          phone: "",
+          value: "",
+          countryCode: "",
+          errors: {},
+          touched: {
+            email: false,
+            name: false,
+            subject: false,
+            message: false,
+            selectedCountry: false,
+            phone: false,
+            value: false,
+            countryCode: false,
+          },
+        });
+        toast.success(res.data.message);
+      })
+      .catch((err) => {
+        toast.error(err.response.data.message);
       });
-    }, 3000);
+    // setTimeout(() => {
+    //   this.setState({
+    //     name: "",
+    //     email: "",
+    //     subject: "",
+    //     code: "--",
+    //     message: "",
+    //     selectedCountry: "",
+    //     phone: "",
+    //     value: "",
+    //     countryCode: "",
+    //     errors: {},
+    //     touched: {
+    //       email: false,
+    //       name: false,
+    //       subject: false,
+    //       message: false,
+    //       selectedCountry: false,
+    //       phone: false,
+    //       value: false,
+    //       countryCode: false,
+    //     },
+    //   });
+    // }, 3000);
   };
   onSelectFlag = (event) => {
     let x = event.target.value.split(",");

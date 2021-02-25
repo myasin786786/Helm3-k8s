@@ -5,6 +5,9 @@ import { Row, Col, Form, FormGroup, FormText, Input, Label, Button } from "react
 // import ReCAPTCHA from "react-google-recaptcha";
 // import Loader from "react-loaders";
 import validate from "validate.js";
+import { toast } from "react-toastify";
+import { ApiUrl } from "../../store/config";
+import axios from "axios";
 // import { FormattedMessage } from "react-intl";
 // import { injectIntl } from "react-intl";
 
@@ -159,34 +162,65 @@ class InvestmentForm extends React.Component {
       currency: this.state.currency,
       reason: this.state.reason,
     };
-    this.props.investmentFormHandler(data, this.clearState);
+    axios
+      .post(ApiUrl + "rnsadmin/investmentAdd", data)
+      .then((res) => {
+        this.setState({
+          name: "",
+          email: "",
+          phone: "",
+          country: "",
+          amount: "",
+          currency: "",
+          reason: "",
+          selectedCountry: "",
+          check: false,
+          errors: {},
+          touched: {
+            name: false,
+            email: false,
+            phone: false,
+            country: false,
+            amount: false,
+            currency: false,
+            reason: false,
+            selectedCountry: false,
+          },
+          errors: {},
+        });
+        toast.success(res.data.message);
+      })
+      .catch((err) => {
+        toast.error(err.response.data.message);
+      });
+    // this.props.investmentFormHandler(data, this.clearState);
 
   };
 
-  clearState = () => {
-    this.setState({
-      name: "",
-      email: "",
-      phone: "",
-      country: "",
-      amount: "",
-      currency: "",
-      reason: "",
-      selectedCountry: "",
-      errors: {},
-      touched: {
-        name: false,
-        email: false,
-        phone: false,
-        country: false,
-        amount: false,
-        currency: false,
-        reason: false,
-        selectedCountry: false,
-      },
-    });
+  // clearState = () => {
+  //   this.setState({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     country: "",
+  //     amount: "",
+  //     currency: "",
+  //     reason: "",
+  //     selectedCountry: "",
+  //     errors: {},
+  //     touched: {
+  //       name: false,
+  //       email: false,
+  //       phone: false,
+  //       country: false,
+  //       amount: false,
+  //       currency: false,
+  //       reason: false,
+  //       selectedCountry: false,
+  //     },
+  //   });
 
-  }
+  // }
   onSelectFlag = (event) => {
     let x = event.target.value.split(",");
     this.setState({
@@ -618,7 +652,7 @@ class InvestmentForm extends React.Component {
                           </Col>
                           <Col lg={12}>
                             <FormGroup>
-                              <Label className="label">Curency</Label>
+                              <Label className="label">Currency</Label>
                               <Input
                                 type="text"
                                 // placeholder={currencyplaceholder}
@@ -637,7 +671,7 @@ class InvestmentForm extends React.Component {
                           </Col>
 
                           <Col lg={12}>
-                            <Label className="label">Why are you partcipating in Antlia Token Sale?</Label>
+                            <Label className="label">Why are you participating in Antlia Token Sale?</Label>
                             <FormGroup>
                               <Input
                                 type="text"
@@ -666,7 +700,7 @@ class InvestmentForm extends React.Component {
                           <Col lg={12}>
                             <FormGroup check>
                               <Label check>
-                                <Input type="checkbox" values={check} onChange={() => this.setState({ check: !check })} />{' '}
+                                <Input type="checkbox" value={check} onChange={() => this.setState({ check: !check })} />{' '}
           I agree that Antlia may contact me using information above*
         </Label>
                             </FormGroup>

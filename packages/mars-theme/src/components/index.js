@@ -10,7 +10,9 @@ import PageError from "./page-error";
 import AboutUs from "./AboutUs/AboutUs";
 import Investment from "./Investment/Investment";
 import StakeFlow from "./StakeFlow/StakeFlow";
+import Wallet from "./Wallet/Wallet";
 import externalCss from "./index.css";
+import { ToastContainer } from 'react-toastify';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -41,26 +43,38 @@ const Theme = ({ state }) => {
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={css(externalCss)} />
-
-      {/* Add the header of the site. */}
-      <HeadContainer>
-        <Header />
-      </HeadContainer>
-
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
+
       <Main>
+        <HeadContainer>
+          <Header />
+        </HeadContainer>
+        <ToastContainer
+          position="top-right"
+          autoClose={true}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnVisibilityChange
+          draggable
+          pauseOnHover
+        />
         <Switch>
+          {/* Add the header of the site. */}
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <AboutUs when={data.isAbout} />
           <Investment when={data.isInvestment} />
           <StakeFlow when={data.isStakeFlow} />
+          <Wallet when={data.isWallet} />
           <PageError when={data.isError} />
         </Switch>
+        <Footer />
       </Main>
-      <Footer/>
+
     </>
   );
 };

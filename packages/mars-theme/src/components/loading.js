@@ -7,9 +7,9 @@ const scale = keyframes`
 `;
 
 const Loading = () => (
-  <div class="start-loader">
-  <div class="loader-in">
-    <div class="lds-roller">
+  <div className="start-loader">
+  <div className="loader-in">
+    <div className="lds-roller">
       <div></div>
       <div></div>
       <div></div>

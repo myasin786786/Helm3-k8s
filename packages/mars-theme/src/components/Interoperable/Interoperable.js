@@ -36,7 +36,7 @@ class Interoperable extends React.Component {
                     {/* {
                       show ? <p>{text2}</p> : <p>{text1}</p>
                     }
-                    <button className="showBtn" onClick={this.changeShow}>{show ? <>Show Less <i class="fa fa-angle-up" aria-hidden="true"></i></> : <>Show More <i class="fa fa-angle-down" aria-hidden="true"></i></>}</button> */}
+                    <button className="showBtn" onClick={this.changeShow}>{show ? <>Show Less <i className="fa fa-angle-up" aria-hidden="true"></i></> : <>Show More <i className="fa fa-angle-down" aria-hidden="true"></i></>}</button> */}
                     <p>Blockchains are not only different because of their consensus but blockchain have different architecture design, many languages and framework to program, and different transaction structure.</p>
                     <a
                       href="https://docs.antlia.io/"
