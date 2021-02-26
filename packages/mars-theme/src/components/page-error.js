@@ -25,32 +25,41 @@ const Page404 = ({ state }) => {
   const title404 = "Oops! 404";
 
   return (
-    <Container>
-      <Title>{data.is404 ? title404 : title}</Title>
-      <Description>{data.is404 ? description404 : description}</Description>
-    </Container>
+    <div className="mainbanner">
+      <Container>
+        <div>
+          <Title>{data.is404 ? title404 : title}</Title>
+          <Description>{data.is404 ? description404 : description}</Description>
+        </div>
+      </Container>
+    </div>
   );
 };
 
 export default connect(Page404);
 
 const Container = styled.div`
-  width: 800px;
-  margin: 0;
+width: 100%;  
+  max-width: 1140px;
+  margin: 0 auto;
   padding: 24px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `;
 
 const Title = styled.h1`
-  margin: 0;
+  margin: 0 auto;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: rgba(12, 17, 43);
+  color: #fff;
   font-size: 4em;
 `;
 
 const Description = styled.div`
   line-height: 1.6em;
-  color: rgba(12, 17, 43, 0.8);
+  color: #fff;
   margin: 24px 0;
 `;

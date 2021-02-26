@@ -7,21 +7,36 @@ const scale = keyframes`
 `;
 
 const Loading = () => (
-  <Container>
-    <div>
-      <div css={bar(1)} />
-      <div css={bar(2)} />
-      <div css={bar(3)} />
-      <div css={bar(4)} />
-      <div css={bar(5)} />
+  <div className="start-loader">
+  <div className="loader-in">
+    <div className="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-  </Container>
+    <img src="https://i.imgur.com/Ql9Tpxm.png" alt="Antlia" />
+  </div>
+</div>
+  // <Container>
+  //   <div>
+  //     <div css={bar(1)} />
+  //     <div css={bar(2)} />
+  //     <div css={bar(3)} />
+  //     <div css={bar(4)} />
+  //     <div css={bar(5)} />
+  //   </div>
+  // </Container>
 );
 
 export default Loading;
 
 const bar = (index) => css`
-  background-color: rgba(12, 17, 43, 0.3);
+  background-color: #000;
   width: 4px;
   height: 24px;
   margin: 3px;
@@ -33,13 +48,14 @@ const bar = (index) => css`
 `;
 
 const Container = styled.div`
+  background-color: #000; 
   width: 800px;
   margin: 0;
   padding: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height: 100vh;
   & > * {
     margin-top: 24px;
   }

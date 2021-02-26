@@ -4,11 +4,41 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
 const teamHandler = {
-  pattern: "/team/",
+  pattern: "/aboutus",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
-      isTeam: true,
+      isAbout: true,
+    })
+  }
+}
+
+const investHandler = {
+  pattern: "/investment",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isInvestment: true,
+    })
+  }
+}
+
+const stakeFlowHandler = {
+  pattern: "/stakeflow",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isStakeFlow: true,
+    })
+  }
+}
+
+const walletHandler = {
+  pattern: "/wallet",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isWallet: true,
     })
   }
 }
@@ -46,6 +76,9 @@ const marsTheme = {
     theme: {
       init: ({ libraries }) => {
         libraries.source.handlers.push(teamHandler);
+        libraries.source.handlers.push(investHandler);
+        libraries.source.handlers.push(stakeFlowHandler);
+        libraries.source.handlers.push(walletHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
