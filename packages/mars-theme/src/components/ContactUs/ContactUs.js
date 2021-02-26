@@ -5,7 +5,8 @@ import { Row, Col, Form, FormGroup, Input, Label, Button } from "reactstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 // import Loader from "react-loaders";
 import validate from "validate.js";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { ApiUrl } from "../../store/config";
 import axios from "axios";
 // import { FormattedMessage } from "react-intl";
@@ -175,10 +176,12 @@ class ContactUs extends React.Component {
             countryCode: false,
           },
         });
-        toast.success(res.data.message);
+        NotificationManager.success(res.data.message);
+        // toast.success(res.data.message);
       })
       .catch((err) => {
-        toast.error(err.response.data.message);
+        NotificationManager.error(err.response.data.message);
+        // toast.error(err.response.data.message);
       });
     // setTimeout(() => {
     //   this.setState({
@@ -763,6 +766,7 @@ to you. If you consent to us, please contact you.</p>
                                 {/* )} */}
                               </Button>
                             </div>
+                            <NotificationContainer/>
                           </Col>
                         </Row>
                       </Form>

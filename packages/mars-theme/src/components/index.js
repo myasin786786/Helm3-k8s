@@ -52,14 +52,15 @@ const Theme = ({ state }) => {
         </HeadContainer>
         <ToastContainer
           position="top-right"
-          autoClose={true}
+          autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
           rtl={false}
-          pauseOnVisibilityChange
+          pauseOnFocusLoss
           draggable
           pauseOnHover
+          
         />
         <Switch>
           {/* Add the header of the site. */}

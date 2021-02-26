@@ -5,7 +5,8 @@ import { Row, Col, Form, FormGroup, FormText, Input, Label, Button } from "react
 // import ReCAPTCHA from "react-google-recaptcha";
 // import Loader from "react-loaders";
 import validate from "validate.js";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import { ApiUrl } from "../../store/config";
 import axios from "axios";
 // import { FormattedMessage } from "react-intl";
@@ -188,10 +189,12 @@ class InvestmentForm extends React.Component {
           },
           errors: {},
         });
-        toast.success(res.data.message);
+        NotificationManager.success(res.data.message);
+        // toast.success(res.data.message);
       })
       .catch((err) => {
-        toast.error(err.response.data.message);
+        NotificationManager.error(err.response.data.message);
+        // toast.error(err.response.data.message);
       });
     // this.props.investmentFormHandler(data, this.clearState);
 
@@ -756,6 +759,7 @@ class InvestmentForm extends React.Component {
                               )} */}
                               </Button>
                             </div>
+                            <NotificationContainer />
                           </Col>
                         </Row>
                       </Form>
