@@ -30,8 +30,7 @@ const Theme = ({ state }) => {
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
          <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet"></link>
-        {/* <link href="http://db.onlinewebfonts.com/c/a05747eaf46bae50f19dfa950b86befd?family=Mark+Pro+Medium" rel="stylesheet" type="text/css"/> */}
-        {/* <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/mark-pro" /> */}
+         {/* <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/mark-pro" /> */}
         <script id="godaddy-security-s" src="https://cdn.sucuri.net/badge/badge.js" data-s="2008" data-i="63987cb6bd92d0fb84698db056be132c528944a4b5" data-p="r" data-c="l" data-t="g"></script>
         {/* Google Tag Manager (noscript)  */}
         {/* <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD6TLM2" height="0" width="0"
