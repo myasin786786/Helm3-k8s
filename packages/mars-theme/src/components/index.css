@@ -11278,21 +11278,21 @@ nav {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   #smart-contract .sc-image .globe {
-    width: 87px;
-    top: 27.5%;
+    width: 87px !important;
+    top: 27.5% !important;
   }
   .tech-slideshow {
-    height: 87px;
-    max-width: 87px;
+    height: 87px !important;
+    max-width: 87px !important;
   }
   .tech-slideshow > div {
     height: 87px;
   }
   .circle-move {
-    right: 8.2rem;
-    top: 31%;
+    right: 8.2rem !important;
+    top: 31% !important;
     width: 62px !important;
-    height: 62px;
+    height: 62px !important;
   }
 }
 
@@ -11450,7 +11450,7 @@ nav {
 #interoperable .interope .res-view {
   display: none;
 }
-@media (max-width: 575px) {
+@media (max-width: 1280px) {
   #interoperable .interope .int-dot-line,
   #interoperable .interope .int-coins,
   #interoperable .interope .top-left,

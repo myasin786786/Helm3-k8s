@@ -5,10 +5,18 @@ import { Row, Col } from "reactstrap";
 import antliainvest from '../../assets/antlia1-invest.png';
 import InvestmentForm from "../InvestmentForm/InvestmentForm";
 // import ContactUs from "../ContactUs/ContactUs";
+import {Helmet} from "react-helmet";
 
 const Investment = () => {
     return (
         <div style={{ width: '100%' }}>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>Investment</title>
+                <link rel="canonical" href="https://antlia.io/investment" />
+                <meta name="title" content="Invest in Antlia | An Incredible Investment opportunity " />
+                <meta name="description" content="Antlia is offering an incredible investment opportunity through this private sale. Antlia Network is seeking the right investors to help co-create the Blockchain-to- Blockchain and Blockchain-to-Oracle communication systems. As an investor, we see you as an important part of the community." />
+            </Helmet>
             <section id="investment-banner">
                 <div className="container">
                     <div className="content-img">

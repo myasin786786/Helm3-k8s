@@ -15,8 +15,8 @@ import {
 import { animateScroll as scroll } from "react-scroll";
 import Link from "./link";
 // import { FormattedMessage } from "react-intl";
-import logo from "../assets/white.svg";
-import logo1 from "../assets/color.svg";
+import logoWhite from "../assets/white.svg";
+import logoColored from "../assets/color.svg";
 import explorer from "../assets/antliaexplorer.svg";
 import wallet from "../assets/antliawallet.svg";
 import faucet from "../assets/antliafaucet.svg";
@@ -96,8 +96,8 @@ class MainNavbar extends React.Component {
           <Navbar id="navbar" light expand="md">
             <div className="container">
               <NavbarBrand tag={Link} link={"/"} onClick={scrollToTop}>
-                <img src={logo} alt="Antlia logo" className="logodes" />
-                <img src={logo1} alt="Antlia logo" className="logores" />
+                <img src={logoWhite} alt="Antlia logo" className="logodes" />
+                <img src={logoColored} alt="Antlia logo" className="logores" />
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
@@ -119,7 +119,7 @@ class MainNavbar extends React.Component {
                   </NavItem>
                   <NavItem className="nav-item1">
                     <Link
-                      link="/stakeflow"
+                      link="/antlia-defi"
                       onClick={scrollToTop}
                       spy={"true"}
                       smooth={"true"}

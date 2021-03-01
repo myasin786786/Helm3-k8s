@@ -1,5 +1,5 @@
 import { userConstants } from "./types";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { ApiUrl } from "../config";
 import axios from "axios";
 

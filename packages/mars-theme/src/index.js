@@ -24,7 +24,7 @@ const investHandler = {
 }
 
 const stakeFlowHandler = {
-  pattern: "/stakeflow",
+  pattern: "/antlia-defi",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

@@ -12,6 +12,7 @@ import bch from '../../assets/coins/bch.png';
 import { Row, Col, Button } from "reactstrap";
 import { animateScroll as scroll } from "react-scroll";
 // import { FormattedMessage } from "react-intl";
+import {Helmet} from "react-helmet";
 
 const StakeFlow = () => {
     const scrollToTop = () => {
@@ -19,6 +20,13 @@ const StakeFlow = () => {
       };
     return (
         <div style={{ width: '100%'}}>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>StakeFlow</title>
+                <link rel="canonical" href="https://antlia.io/antlia-defi" />
+                <meta name="title" content="Incentivized multi-tier reward DeFi staking application | Stakeflow" />
+                <meta name="description" content="StakeFlow is powered by interoperable and scalable Antlia blockchain. StakeFlow provides legacy stake rewards on proof of stake chains such as Ethereum and Cosmos by utilizing governance tokens and multi synthetic tokens." />
+            </Helmet>
             <div id="defi">
                 <div className="container">
                     <div className="content-img">
