@@ -25,7 +25,7 @@ const Page404 = ({ state }) => {
   const title404 = "Oops! 404";
 
   return (
-    <div className="mainbanner">
+    <div className="mainbanner vh-100">
       <Container>
         <div>
           <Title>{data.is404 ? title404 : title}</Title>
