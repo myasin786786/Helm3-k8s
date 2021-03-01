@@ -1,10 +1,11 @@
+import { gtmId } from './packages/mars-theme/src/store/config'
 const settings = {
   "name": "antlia-web-frontity",
   "state": {
     "frontity": {
       "url": "https://antlia.io/",
       "title": "ANTLIA - Beyond Interchange & Oracles",
-      "description": "we Antlia blockchain work on interchain and oracles, smart contracts, Rollover Proof of Stake (rPoS) and are interoperable."
+      "description": "We Antlia blockchain work on interchain and oracles, smart contracts, Rollover Proof of Stake (rPoS) and are interoperable."
     }
   },
   "packages": [
@@ -43,6 +44,14 @@ const settings = {
             "showOnPost": false
           }
         }
+      }
+    },
+    {
+      "name": "@frontity/google-tag-manager-analytics",
+      "state": {
+        "googleTagManagerAnalytics": {
+          "containerId": gtmId,
+        },
       }
     },
     {

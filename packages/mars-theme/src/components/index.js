@@ -13,7 +13,7 @@ import StakeFlow from "./StakeFlow/StakeFlow";
 import Wallet from "./Wallet/Wallet";
 import externalCss from "./index.css";
 // import { ToastContainer } from 'react-toastify';
-import { Helmet, Child } from "react-helmet";
+import { websiteLink }  from '../store/config'
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -32,20 +32,16 @@ const Theme = ({ state }) => {
         <html lang="en" />
         <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet"></link>
         <script id="godaddy-security-s" src="https://cdn.sucuri.net/badge/badge.js" data-s="2008" data-i="63987cb6bd92d0fb84698db056be132c528944a4b5" data-p="r" data-c="l" data-t="g"></script>
-
+        <meta name="google-site-verification" content="JNMT9OYXqNMW9jLqclF5kMZ4OlpNiLyLOnwNYOr-pMg" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
-        {/* <Child> */}
-        {/* Google Tag Manager (noscript) */}
-
-        {/* <Helmet> */}
-        <noscript>{`
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD6TLM2" height="0" width="0"
-            className="iframe"></iframe>
-            `}</noscript>
-        {/* </Helmet> */}
-
-        {/* End Google Tag Manager (noscript) */}
-        {/* </Child> */}
+        <meta name="robots" content="noodp, noydir, index, follow, archive" />
+        <meta name="robots" content="max-snippet:50, max-image-preview:large" />
+        <link rel="canonical" href={websiteLink} />
+        <meta property="og:title" content={state.frontity.title} />
+        <meta property="og:description" content={state.frontity.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={websiteLink} />
+        <meta property="og:image" content="https://i.imgur.com/El8IXYd.png" />
       </Head>
 
 
@@ -60,18 +56,6 @@ const Theme = ({ state }) => {
         <HeadContainer>
           <Header />
         </HeadContainer>
-        {/* <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          
-        /> */}
         <Switch>
           {/* Add the header of the site. */}
           <Loading when={data.isFetching} />
