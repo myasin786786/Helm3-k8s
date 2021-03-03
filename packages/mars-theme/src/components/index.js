@@ -71,9 +71,8 @@ const Theme = ({ state, actions }) => {
           <PageError when={data.isError} />
           <Blog state={actions} props={state} when={data.isBlog} />
         </Switch>
-        <Footer />
+        <Footer props={state.router.link} />
       </Main>
-
     </>
   );
 };
