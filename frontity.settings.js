@@ -1,9 +1,9 @@
-import { gtmId } from './packages/mars-theme/src/store/config'
+import { gtmId,wordPressLink } from './packages/mars-theme/src/store/config'
 const settings = {
   "name": "antlia-web-frontity",
   "state": {
     "frontity": {
-      "url": "https://antlia.io/",
+      "url": wordPressLink,
       "title": "ANTLIA - Beyond Interchange & Oracles",
       "description": "We Antlia blockchain work on interchain and oracles, smart contracts, Rollover Proof of Stake (rPoS) and are interoperable."
     }
@@ -40,8 +40,8 @@ const settings = {
             ]
           ],
           "featured": {
-            "showOnList": false,
-            "showOnPost": false
+            "showOnList": true,
+            "showOnPost": true
           }
         }
       }
@@ -58,7 +58,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": wordPressLink
         }
       }
     },

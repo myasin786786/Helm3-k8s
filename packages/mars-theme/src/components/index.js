@@ -11,15 +11,16 @@ import AboutUs from "./AboutUs/AboutUs";
 import Investment from "./Investment/Investment";
 import StakeFlow from "./StakeFlow/StakeFlow";
 import Wallet from "./Wallet/Wallet";
+import Blog from "./Blog/Blog";
 import externalCss from "./index.css";
 // import { ToastContainer } from 'react-toastify';
-import { websiteLink }  from '../store/config'
+import { websiteLink } from '../store/config'
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
-const Theme = ({ state }) => {
+const Theme = ({ state, actions }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
 
@@ -30,7 +31,9 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
-        <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"></link>
+        {/* <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link> */}
+        {/* <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet"></link> */}
         <script id="godaddy-security-s" src="https://cdn.sucuri.net/badge/badge.js" data-s="2008" data-i="63987cb6bd92d0fb84698db056be132c528944a4b5" data-p="r" data-c="l" data-t="g"></script>
         <meta name="google-site-verification" content="JNMT9OYXqNMW9jLqclF5kMZ4OlpNiLyLOnwNYOr-pMg" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
@@ -66,6 +69,7 @@ const Theme = ({ state }) => {
           <StakeFlow when={data.isStakeFlow} />
           <Wallet when={data.isWallet} />
           <PageError when={data.isError} />
+          <Blog state={actions} props={state} when={data.isBlog} />
         </Switch>
         <Footer />
       </Main>

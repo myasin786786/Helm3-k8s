@@ -13,14 +13,14 @@ export const structuredData = blog => {
     datePublished: new Date(post.date).toLocaleString(),
     // description: post.excerpt.rendered,
     headline: post.title.rendered,
-    image: media.source_url,
+    image: media && media.source_url,
     mainEntityOfPage: websiteLink + blog.router.link,
     name: post.title.rendered,
     publisher: {
       "@type": "Organization",
       logo: {
         "@type": "ImageObject",
-        url: "https://i.imgur.com/as9Mj8G.png"
+        url: "https://i.imgur.com/vKFkMJf.png"
       },
       name: blog.frontity.title
     },

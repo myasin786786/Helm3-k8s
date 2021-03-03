@@ -30,3 +30,13 @@ switch (AppMode[0]) {
 }
 
 export { AppTitle, ApiUrl, AppMode, gtmId, websiteLink };
+
+const API = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : "https://rns-site-backend.rnssol.com/api/";
+const firebaseAPI = "https://firestore.googleapis.com/v1/projects/rns-solutions/databases/(default)/documents:runQuery";
+
+export const wordPressLink = "https://test.cashero.com";
+
+export const FirebaseEndPoints = {
+  Blogs: `${firebaseAPI + "blogs"}`,
+}
+

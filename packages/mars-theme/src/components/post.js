@@ -3,6 +3,8 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import List from "./list";
 import FeaturedMedia from "./featured-media";
+import { structuredData } from "../store/SEO/Blog/structuredData";
+import { Row, Col } from "reactstrap";
 
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
@@ -10,9 +12,9 @@ const Post = ({ state, actions, libraries }) => {
   // Get the data of the post.
   const post = state.source[data.type][data.id];
   // Get the data of the author.
-  const author = state.source.author[post.author];
+  // const author = state.source.author[post.author];
   // Get a human readable date.
-  const date = new Date(post.date);
+  const date = new Date(post.date).toLocaleDateString();
 
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
@@ -29,72 +31,114 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container>
-      <div>
-        <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+    <>
+      <script className="structured-data-list" type="application/ld+json">
+        {structuredData(state)}
+      </script>
+      <section className="blogs">
+        <div className="container">
+          <Row className="blog-details">
+            <Col lg={12}>
+              <div className="blog-box">
+                <h4><div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div></h4>
+                <div className="likes-date">
+                  <div className="like-view">
+                    {/* <span className="likes"><i className="fa fa-heart"></i> <p>1,234</p></span> */}
 
-        {/* Only display author and date on posts */}
-        {data.isPost && (
-          <div>
-            {author && (
-              <StyledLink link={author.link}>
-                <Author>
-                  By <b>{author.name}</b>
-                </Author>
-              </StyledLink>
-            )}
-            <DateWrapper>
-              {" "}
-              on <b>{date.toDateString()}</b>
-            </DateWrapper>
-          </div>
-        )}
-      </div>
+                    {/* <span className="views"><i className="fa fa-eye"></i>&nbsp;<p>{info.views}&nbsp;views</p></span> */}
+                  </div>
+                  <div className="date">
+                    <p>{date}</p>
+                  </div>
+                </div>
+                <div className="blog-img img-hover-zoom--slowmo">
+                  {state.theme.featured.showOnPost && (
+                    <FeaturedMedia id={post.featured_media} />
+                  )}
+                </div>
+                <div className="blog-content">
+                  <div className="desc">
+                    {/* {this.state.contentEditor ? <Editor initialContentState={this.state.contentEditor} readOnly={true} toolbarHidden
+                    editorClassName="demo-editor" /> : ""} */}
+                    <Content>
+                      <Html2React html={post.content.rendered} />
+                    </Content>
+                  </div>
+                  <Link link="/blog">Back to list</Link>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </section>
+    </>
 
-      {/* Look at the settings to see if we should include the featured image */}
-      {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
-      )}
+    // <Container>
+    //   <div>
+    //     <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
-      {/* Render the content using the Html2React component so the HTML is processed
-       by the processors we included in the libraries.html2react.processors array. */}
-      <Content>
-        <Html2React html={post.content.rendered} />
-      </Content>
-    </Container>
+    //     {/* Only display author and date on posts */}
+    //     {data.isPost && (
+    //       <div>
+    //         {author && (
+    //           <StyledLink link={author.link}>
+    //             <Author>
+    //               By <b>{author.name}</b>
+    //             </Author>
+    //           </StyledLink>
+    //         )}
+    //         <DateWrapper>
+    //           {" "}
+    //           on <b>{date.toDateString()}</b>
+    //         </DateWrapper>
+    //       </div>
+    //     )}
+    //   </div>
+
+    //   {/* Look at the settings to see if we should include the featured image */}
+    //   {state.theme.featured.showOnPost && (
+    //     <FeaturedMedia id={post.featured_media} />
+    //   )}
+
+    //   {/* Render the content using the Html2React component so the HTML is processed
+    //    by the processors we included in the libraries.html2react.processors array. */}
+    //   <Content>
+    //     <Html2React html={post.content.rendered} />
+    //   </Content>
+    // </Container>
   ) : null;
 };
 
 export default connect(Post);
 
-const Container = styled.div`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
-`;
+// const Container = styled.div`
+//   width: 800px;
+//   margin: 0;
+//   padding: 24px;
+// `;
 
-const Title = styled.h1`
-  margin: 0;
-  margin-top: 24px;
-  margin-bottom: 8px;
-  color: rgba(12, 17, 43);
-`;
+// const Title = styled.h1`
+//   margin: 0;
+//   margin-top: 24px;
+//   margin-bottom: 8px;
+//   color: rgba(12, 17, 43);
+// `;
 
-const StyledLink = styled(Link)`
-  padding: 15px 0;
-`;
+// const StyledLink = styled(Link)`
+//   padding: 15px 0;
+// `;
 
-const Author = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-  display: inline;
-`;
+// const Author = styled.p`
+//   color: rgba(12, 17, 43, 0.9);
+//   font-size: 0.9em;
+//   display: inline;
+// `;
 
-const DateWrapper = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-  display: inline;
-`;
+// const DateWrapper = styled.p`
+//   color: rgba(12, 17, 43, 0.9);
+//   font-size: 0.9em;
+//   display: inline;
+// `;
 
 /**
  * This component is the parent of the `content.rendered` HTML. We can use nested

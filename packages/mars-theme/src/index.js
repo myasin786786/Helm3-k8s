@@ -43,6 +43,16 @@ const walletHandler = {
   }
 }
 
+const blogHandler = {
+  pattern: "/blogs",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isBlog: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -79,6 +89,7 @@ const marsTheme = {
         libraries.source.handlers.push(investHandler);
         libraries.source.handlers.push(stakeFlowHandler);
         libraries.source.handlers.push(walletHandler);
+        libraries.source.handlers.push(blogHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
