@@ -1,101 +1,10 @@
 import React from "react";
 import { Row, Col, Form, FormGroup, Input, Label, Button } from "reactstrap";
-// import ReactPhoneInput from "react-phone-input-2";
-// import ReactFlagsSelect from "react-flags-select";
 import ReCAPTCHA from "react-google-recaptcha";
-// import Loader from "react-loaders";
 import validate from "validate.js";
-// import { toast } from "react-toastify";
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import { ApiUrl } from "../../store/config";
 import axios from "axios";
-// import { FormattedMessage } from "react-intl";
-// import { injectIntl } from "react-intl";
-
-// var schema = {
-//   email: {
-//     email: {
-//       message: (
-//         <FormattedMessage
-//           id="contact.emailerror"
-//           defaultMessage="Email must be valid."
-//         />
-//       ),
-//     },
-//   },
-//   name: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.nameerror"
-//           defaultMessage="Name must be filled."
-//         />
-//       ),
-//     },
-//   },
-//   subject: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.subjecterror"
-//           defaultMessage="Subject must be filled."
-//         />
-//       ),
-//     },
-//   },
-//   message: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.messageerror"
-//           defaultMessage="Message must be filled."
-//         />
-//       ),
-//     },
-//   },
-//   phone: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.phoneerror"
-//           defaultMessage="Phone must be entered."
-//         />
-//       ),
-//     },
-//   },
-//   country: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.countryerror"
-//           defaultMessage="Country must be selected."
-//         />
-//       ),
-//     },
-//   },
-//   selectedCountry: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.countryerror"
-//           defaultMessage="Country must be selected."
-//         />
-//       ),
-//     },
-//   },
-// };
 
 class ContactUs extends React.Component {
   state = {
@@ -150,7 +59,6 @@ class ContactUs extends React.Component {
       country: this.state.country,
       phonenumber: this.state.phone,
     };
-    // this.props.userContactHandler(data);
     axios
       .post(ApiUrl + "rnsadmin/contactAdd", data)
       .then((res) => {
@@ -177,36 +85,10 @@ class ContactUs extends React.Component {
           },
         });
         NotificationManager.success(res.data.message);
-        // toast.success(res.data.message);
       })
       .catch((err) => {
         NotificationManager.error(err.response.data.message);
-        // toast.error(err.response.data.message);
       });
-    // setTimeout(() => {
-    //   this.setState({
-    //     name: "",
-    //     email: "",
-    //     subject: "",
-    //     code: "--",
-    //     message: "",
-    //     selectedCountry: "",
-    //     phone: "",
-    //     value: "",
-    //     countryCode: "",
-    //     errors: {},
-    //     touched: {
-    //       email: false,
-    //       name: false,
-    //       subject: false,
-    //       message: false,
-    //       selectedCountry: false,
-    //       phone: false,
-    //       value: false,
-    //       countryCode: false,
-    //     },
-    //   });
-    // }, 3000);
   };
   onSelectFlag = (event) => {
     let x = event.target.value.split(",");
@@ -233,7 +115,6 @@ class ContactUs extends React.Component {
     this.setState({ code: "+" + e.target.value, Country: e.target.value });
   }
   render() {
-    // const { contactUsLoading } = this.props;
     const {
       name,
       email,
@@ -255,34 +136,8 @@ class ContactUs extends React.Component {
         // value: this.state.value,
         selectedCountry: selectedCountry,
       },
-      // schema
     );
     errors = errors ? errors : {};
-
-    // const nameplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.name",
-    //   defaultMessage: "Your Name*",
-    // });
-    // const emailplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.email",
-    //   defaultMessage: "Your Email*",
-    // });
-    // const subjectplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.subject",
-    //   defaultMessage: "Subject*",
-    // });
-    // const msgplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.msg",
-    //   defaultMessage: "Your Message*",
-    // });
-    // const countryplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.country",
-    //   defaultMessage: "Select Country*",
-    // });
-    // const phoneplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.phonenumber",
-    //   defaultMessage: "Phone Number*",
-    // });
 
     return (
       <div>
@@ -306,7 +161,6 @@ class ContactUs extends React.Component {
                         well as other content that may be of interest
 to you. If you consent to us, please contact you.</p>
                       </div>
-
                       {/* <Row>
                         <Col lg={2} md={2} sm={2}>
                           <div className="iconbox">
@@ -328,7 +182,6 @@ to you. If you consent to us, please contact you.</p>
                     </div>
                   </Col>
                   <Col lg={6} md={12}>
-
                     <div className="contact-form">
                       <h4>Send us a Message</h4>
                       <Form >
@@ -636,7 +489,6 @@ to you. If you consent to us, please contact you.</p>
                                 onChange={this.onPhoneHandler}
                                 value={this.state.phone}
                               />
-
                               {/* </div> */}
                               {/* {this.state.touched.phone && (
                                 <FormText>
@@ -644,7 +496,6 @@ to you. If you consent to us, please contact you.</p>
                                 </FormText>
                               )} */}
                             </FormGroup>
-
                             {/* <FormGroup>
                               <Label className="label">Phone</Label>
                               <div className="ctrycode">
@@ -659,7 +510,6 @@ to you. If you consent to us, please contact you.</p>
                                   onChange={this.onPhoneHandler}
                                   value={this.state.phone}
                                 />
-
                               </div>
                               {this.state.touched.phone && (
                                 <FormText>
@@ -667,7 +517,6 @@ to you. If you consent to us, please contact you.</p>
                                 </FormText>
                               )}
                             </FormGroup> */}
-
                           </Col>
                         </Row>
                         <Row>
@@ -736,7 +585,6 @@ to you. If you consent to us, please contact you.</p>
                                 width="100%"
                               />
                             </div>
-
                           </Col>
                         </Row>
                         <Row>
@@ -752,7 +600,6 @@ to you. If you consent to us, please contact you.</p>
                                   country === "" ||
                                   Object.keys(errors).length !== 0
                                 }
-
                                 onClick={this.submitFormHandler}
                                 type="submit"
                               >
@@ -766,7 +613,7 @@ to you. If you consent to us, please contact you.</p>
                                 {/* )} */}
                               </Button>
                             </div>
-                            <NotificationContainer/>
+                            <NotificationContainer />
                           </Col>
                         </Row>
                       </Form>

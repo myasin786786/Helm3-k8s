@@ -13,7 +13,6 @@ import StakeFlow from "./StakeFlow/StakeFlow";
 import Wallet from "./Wallet/Wallet";
 import Blog from "./Blog/Blog";
 import externalCss from "./index.css";
-// import { ToastContainer } from 'react-toastify';
 import { websiteLink } from '../store/config'
 
 /**

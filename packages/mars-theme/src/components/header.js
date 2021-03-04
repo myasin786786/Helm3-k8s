@@ -14,7 +14,6 @@ import {
 } from "reactstrap";
 import { animateScroll as scroll } from "react-scroll";
 import Link from "./link";
-// import { FormattedMessage } from "react-intl";
 import logoWhite from "../assets/white.svg";
 import logoColored from "../assets/color.svg";
 import explorer from "../assets/antliaexplorer.svg";

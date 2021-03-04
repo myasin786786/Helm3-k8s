@@ -11,16 +11,15 @@ import btc from '../../assets/coins/btc.png';
 import bch from '../../assets/coins/bch.png';
 import { Row, Col, Button } from "reactstrap";
 import { animateScroll as scroll } from "react-scroll";
-// import { FormattedMessage } from "react-intl";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const StakeFlow = () => {
     const scrollToTop = () => {
         scroll.scrollToTop();
-      };
+    };
     return (
-        <div style={{ width: '100%'}}>
-             <Helmet>
+        <div style={{ width: '100%' }}>
+            <Helmet>
                 <meta charSet="utf-8" />
                 <title>StakeFlow</title>
                 <link rel="canonical" href="https://antlia.io/antlia-defi" />
@@ -34,7 +33,7 @@ const StakeFlow = () => {
                             <div>
                                 <h1>World's First Cross-chain Money Market</h1>
                                 <p> Lend, borrow and earn with your crypto now. </p>
-                                <Link link="/wallet"  onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500} className="connect-link">Connect Wallet &nbsp;
+                                <Link link="/wallet" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500} className="connect-link">Connect Wallet &nbsp;
                       <i className="fa fa-arrow-right" aria-hidden="true"></i>
                                 </Link>
                                 <Link link="/wallet" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500} className="simple-link">Connect without Wallet &nbsp;

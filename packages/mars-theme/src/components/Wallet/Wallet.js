@@ -10,7 +10,6 @@ import btc from '../../assets/coins/btc.png';
 import bch from '../../assets/coins/bch.png';
 import { Row, Col, Button } from "reactstrap";
 // import { animateScroll as scroll } from "react-scroll";
-// import { FormattedMessage } from "react-intl";
 
 const Wallet = () => {
     const [

@@ -105,8 +105,8 @@ abbr[title] {
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-  /* text-decoration-skip-ink: none; */
+  /* -webkit-text-decoration-skip-ink: none; */
+  text-decoration-skip-ink: none;
 }
 address {
   margin-bottom: 1rem;
@@ -5242,8 +5242,8 @@ a.close.disabled {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
   opacity: 0;
   border-radius: 0.25rem;
 }
@@ -12480,7 +12480,7 @@ nav {
   }
 }
 
-// Investment Banner Styles
+/* Investment Banner Styles */
 #investment-banner {
   background: #001010;
   background: -moz-linear-gradient(top, #001010 0%, #061b44 100%);
@@ -12602,40 +12602,37 @@ nav {
   }
 }
 
-// Private Sale Section Styles
+ /* Private Sale Section Styles */
 #private-sale {
   padding: 5rem 0;
-  background-color: #fafafa;
-  .desc {
+  background-color: #fafafa; 
+
+}
+#private-sale  .desc {
     padding: 3rem 5rem;
     border: 1px solid #e1e1e1;
-    // box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    h1 {
+}
+#private-sale h1 {
       font-size: 30px;
       color: #477afc;
       font-weight: 500;
-      /* font-family: "Mark Pro Book"; */
       margin: 0 0 1.5rem;
-    }
-    p {
+}
+#private-sale p {
       font-size: 16px;
       color: #848688;
-      /* font-family: "Mark Pro Regular"; */
     }
-  }
-}
-
 @media (max-width: 767px) {
   #private-sale {
     padding: 1.5rem 0;
-    .desc {
+  }
+  #private-sale   .desc {
       padding: 1.5rem;
     }
   }
-}
 
-// Antlia DeFi Styles
+/* Antlia DeFi Styles */
 #defi {
   background-image: url("https://i.imgur.com/rykC7fu.png");
   background-repeat: no-repeat;
@@ -12829,7 +12826,7 @@ nav {
 @media (max-width: 991px) {
   #defi {
     height: auto !important;
-    min-height: !important;
+    min-height: auto !important;
   }
   #defi .content-img {
     flex-wrap: wrap;
@@ -13052,7 +13049,7 @@ nav {
   }
 }
 
-// Backed by Section Styles
+/* Backed by Section Styles */
 #backedby {
   background-image: url("https://i.imgur.com/TfmeNyF.png");
   background-color: #f7f5f4;

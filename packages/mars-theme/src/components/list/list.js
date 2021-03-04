@@ -1,4 +1,5 @@
-import { connect, styled, decode } from "frontity";
+// import { connect, styled, decode } from "frontity";
+import { connect } from "frontity";
 // import Item from "./list-item";
 // import Pagination from "./pagination";
 import MainBanner from './../MainBanner/MainBanner';
@@ -17,7 +18,7 @@ const List = ({ state }) => {
 
   return (
     <>
-     <script className="structured-data-list" type="application/ld+json">
+      <script className="structured-data-list" type="application/ld+json">
         {structuredData(state)}
       </script>
       <MainBanner />
@@ -56,15 +57,15 @@ const List = ({ state }) => {
 
 export default connect(List);
 
-const Container = styled.section`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
-  list-style: none;
-`;
+// const Container = styled.section`
+//   width: 800px;
+//   margin: 0;
+//   padding: 24px;
+//   list-style: none;
+// `;
 
-const Header = styled.h3`
-  font-weight: 300;
-  text-transform: capitalize;
-  color: rgba(12, 17, 43, 0.9);
-`;
+// const Header = styled.h3`
+//   font-weight: 300;
+//   text-transform: capitalize;
+//   color: rgba(12, 17, 43, 0.9);
+// `;

@@ -1,16 +1,9 @@
 import React from "react";
 import { Row, Col, Form, FormGroup, FormText, Input, Label, Button } from "reactstrap";
-// import ReactPhoneInput from "react-phone-input-2";
-// import ReactFlagsSelect from "react-flags-select";
-// import ReCAPTCHA from "react-google-recaptcha";
-// import Loader from "react-loaders";
 import validate from "validate.js";
-// import { toast } from "react-toastify";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import { ApiUrl } from "../../store/config";
 import axios from "axios";
-// import { FormattedMessage } from "react-intl";
-// import { injectIntl } from "react-intl";
 
 // var schema = {
 //   name: {
@@ -190,40 +183,12 @@ class InvestmentForm extends React.Component {
           errors: {},
         });
         NotificationManager.success(res.data.message);
-        // toast.success(res.data.message);
       })
       .catch((err) => {
         NotificationManager.error(err.response.data.message);
-        // toast.error(err.response.data.message);
       });
-    // this.props.investmentFormHandler(data, this.clearState);
-
   };
 
-  // clearState = () => {
-  //   this.setState({
-  //     name: "",
-  //     email: "",
-  //     phone: "",
-  //     country: "",
-  //     amount: "",
-  //     currency: "",
-  //     reason: "",
-  //     selectedCountry: "",
-  //     errors: {},
-  //     touched: {
-  //       name: false,
-  //       email: false,
-  //       phone: false,
-  //       country: false,
-  //       amount: false,
-  //       currency: false,
-  //       reason: false,
-  //       selectedCountry: false,
-  //     },
-  //   });
-
-  // }
   onSelectFlag = (event) => {
     let x = event.target.value.split(",");
     this.setState({
@@ -247,7 +212,6 @@ class InvestmentForm extends React.Component {
 
 
   render() {
-    // const { investmentFormLoading } = this.props;
     const {
       name,
       email,
@@ -274,37 +238,6 @@ class InvestmentForm extends React.Component {
       // schema
     );
     errors = errors ? errors : {};
-
-
-    // const nameplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.name",
-    //   defaultMessage: "Your Name*",
-    // });
-    // const emailplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.email",
-    //   defaultMessage: "Your Email*",
-    // });
-    // const countryplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.country",
-    //   defaultMessage: "Select Country*",
-    // });
-    // const phoneplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.phonenumber",
-    //   defaultMessage: "Phone Number*",
-    // });
-    // const amountplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.subject",
-    //   defaultMessage: "Amount*",
-    // });
-    // const currrencyplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.subject",
-    //   defaultMessage: "Currency*",
-    // });
-    // const reasonplaceholder = this.props.intl.formatMessage({
-    //   id: "contact.msg",
-    //   defaultMessage: "Mention reason*",
-    // });
-
 
     return (
       <div>
