@@ -91,7 +91,7 @@ const Footer = (props) => {
                   <li><a href="https://www.facebook.com/AntliaOfficial/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                   <li><a href="https://twitter.com/antlia_chain" target="_blank" rel="noopener noreferrer">Twitter</a></li>
                   <li><a href="https://www.youtube.com/channel/UCRRUcJfQYXSGXwoFu72o-nw" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                  <li><a href="https://www.instagram.com/antlia.protocol/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                  <li><a href="https://www.instagram.com/antlia.blockchain/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 </ul>
               </div>
               <div className="footer-item">
