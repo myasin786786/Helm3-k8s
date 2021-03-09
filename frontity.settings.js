@@ -1,4 +1,4 @@
-import { gtmId,wordPressLink } from './packages/mars-theme/src/store/config'
+import { gtmId, wordPressLink } from './packages/mars-theme/src/store/config'
 const settings = {
   "name": "antlia-web-frontity",
   "state": {
