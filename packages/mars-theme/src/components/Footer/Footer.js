@@ -62,7 +62,7 @@ const Footer = (props) => {
                   <li><a href="https://docs.antlia.io/antlia-litepaper" target="_blank" rel="noopener noreferrer">Litepaper</a></li>
                   {/* <li><a href="https://medium.com/@rnssol" target="_blank" rel="noopener noreferrer" >Blogs</a></li> */}
                   {/* <li><a href="https://antliablockchain.medium.com/" target="_blank" rel="noopener noreferrer" >Blogs</a></li> */}
-                  <li><Link link="/blogs" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Blogs</Link></li>
+                  <li><Link link="/blog" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Blogs</Link></li>
                   <li><Link link="/events" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Media Kit</Link></li>
                   <li><a href="https://discord.gg/uH497RVZNA" target="_blank" rel="noopener noreferrer">Community</a></li>
                 </ul>

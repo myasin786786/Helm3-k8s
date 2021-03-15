@@ -80,7 +80,7 @@ const Post = ({ state, actions, libraries }) => {
                       <Html2React html={post.content.rendered} />
                     </Content>
                   </div>
-                  <Link link="/blogs">Back to list</Link>
+                  <Link link="/blog">Back to list</Link>
                 </div>
               </div>
             </Col>

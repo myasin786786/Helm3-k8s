@@ -44,7 +44,7 @@ const walletHandler = {
 }
 
 const blogHandler = {
-  pattern: "/blogs",
+  pattern: "/blog",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

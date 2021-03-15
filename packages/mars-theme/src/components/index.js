@@ -19,7 +19,7 @@ import { websiteLink } from '../store/config'
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
-const Theme = ({ state, actions }) => {
+const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
 
@@ -68,7 +68,7 @@ const Theme = ({ state, actions }) => {
           <StakeFlow when={data.isStakeFlow} />
           <Wallet when={data.isWallet} />
           <PageError when={data.isError} />
-          <Blog state={actions} props={state} when={data.isBlog} />
+          <Blog when={data.isBlog} />
         </Switch>
         <Footer props={state.router.link} />
       </Main>
