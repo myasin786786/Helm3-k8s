@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "frontity";
-import { Row, Col } from "reactstrap";
-import { Spinner } from 'reactstrap';
+import { Row, Col, Spinner } from "reactstrap";
 import FeaturedMedia from "../featured-media";
 
 const Blog = ({ state, actions }) => {
     const [loading, setLoading] = useState(true)
-    const data = Object.values(state.source.post);
-
+    const [data, setData] = useState([])
+    const getPostsFromCategory = ({ post }, categoryId) => Object.keys(post).map(postId => post[postId])
+        .filter(({ categories }) => categories.includes(parseInt(categoryId)));
+    const blogs = () => {
+        setData([])
+        if (Object.keys(state.source.category).length !== 0) {
+            Object.keys(state.source.category).reduce(() => {
+                const posts = getPostsFromCategory(state.source, 2)
+                setData(posts.reverse())
+                setLoading(false);
+            })
+        }
+    }
     useEffect(() => {
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000)
-    }, [])
-
+        blogs()
+    }, [data])
     return (
         <section className="blogs">
             <div className="aboutbg">
@@ -45,7 +52,7 @@ const Blog = ({ state, actions }) => {
                         <>
                             <Row className="top-blogs">
                                 <Col lg={8} sm={12}>
-                                    {data.reverse().slice(0, 1).map(({ type, id }, index) => {
+                                    {data.slice(0, 1).map(({ type, id }, index) => {
                                         const item = state.source[type][id];
                                         const date = new Date(item.date).toLocaleDateString();
                                         return (
@@ -74,7 +81,7 @@ const Blog = ({ state, actions }) => {
                                     }
                                 </Col>
                                 <Col lg={4} sm={12} className="right-blog">
-                                    {data.reverse().slice(1, 3).map(({ type, id }, index) => {
+                                    {data.slice(1, 3).map(({ type, id }, index) => {
                                         const item = state.source[type][id];
                                         const date = new Date(item.date).toLocaleDateString();
                                         return (
@@ -104,7 +111,7 @@ const Blog = ({ state, actions }) => {
                                 </Col>
                             </Row>
                             <Row className="blog-list">
-                                {data.reverse().slice(3).map(({ type, id }, index) => {
+                                {data.slice(3).map(({ type, id }, index) => {
                                     const item = state.source[type][id];
                                     const date = new Date(item.date).toLocaleDateString();
                                     return (

@@ -11,7 +11,7 @@ const staging = "http://3.15.22.214:4000/api";
 
 const gtmId = "GTM-PD6TLM2";
 const websiteLink = "https://staging-web.antlia.io";
-const wordPressLink = "https://wp.cashero.com";
+const wordPressLink = "https://wp.rnssol.com";
 
 let ApiUrl = "";
 // let ApiSocket ='';

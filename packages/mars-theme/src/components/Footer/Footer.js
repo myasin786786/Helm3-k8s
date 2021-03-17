@@ -102,7 +102,7 @@ const Footer = (props) => {
                   {/* <li><Link link="/">Terms</Link></li> */}
                   {/* <li><Link link="/">Roadmap</Link></li> */}
                   {/* <li><Link link="/">Disclaimer</Link></li> */}
-                  <li><Link link="/privacypolicy" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Privacy Policy</Link></li>
+                  <li><Link link="/privacy-policy" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Privacy Policy</Link></li>
                   <li><span>contact@antlia.io</span></li>
                 </ul>
               </div>

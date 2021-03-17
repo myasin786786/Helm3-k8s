@@ -12,6 +12,7 @@ import bch from '../../assets/coins/bch.png';
 import { Row, Col, Button } from "reactstrap";
 import { animateScroll as scroll } from "react-scroll";
 import { Helmet } from "react-helmet";
+import { websiteLink } from "../../store/config";
 
 const StakeFlow = () => {
     const scrollToTop = () => {
@@ -22,7 +23,7 @@ const StakeFlow = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>StakeFlow</title>
-                <link rel="canonical" href="https://antlia.io/antlia-defi" />
+                <link rel="canonical" href={websiteLink + "/antlia-defi"} />
                 <meta name="title" content="Incentivized multi-tier reward DeFi staking application | Stakeflow" />
                 <meta name="description" content="StakeFlow is powered by interoperable and scalable Antlia blockchain. StakeFlow provides legacy stake rewards on proof of stake chains such as Ethereum and Cosmos by utilizing governance tokens and multi synthetic tokens." />
             </Helmet>
@@ -34,10 +35,10 @@ const StakeFlow = () => {
                                 <h1>World's First Cross-chain Money Market</h1>
                                 <p> Lend, borrow and earn with your crypto now. </p>
                                 <Link link="/wallet" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500} className="connect-link">Connect Wallet &nbsp;
-                      <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                                <i className="fa fa-arrow-right" aria-hidden="true"></i>
                                 </Link>
                                 <Link link="/wallet" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500} className="simple-link">Connect without Wallet &nbsp;
-                      <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                                <i className="fa fa-arrow-right" aria-hidden="true"></i>
                                 </Link>
                             </div>
                         </div>

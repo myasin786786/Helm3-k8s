@@ -7,13 +7,16 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+import ComingSoon from "./comingsoon";
+import Events from "./Events/Events";
+import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
 import AboutUs from "./AboutUs/AboutUs";
 import Investment from "./Investment/Investment";
-import StakeFlow from "./StakeFlow/StakeFlow";
-import Wallet from "./Wallet/Wallet";
+// import StakeFlow from "./StakeFlow/StakeFlow";
+// import Wallet from "./Wallet/Wallet";
 import Blog from "./Blog/Blog";
 import externalCss from "./index.css";
-import { websiteLink } from '../store/config'
+import { websiteLink } from '../store/config';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -22,7 +25,6 @@ import { websiteLink } from '../store/config'
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -45,15 +47,11 @@ const Theme = ({ state }) => {
         <meta property="og:url" content={websiteLink} />
         <meta property="og:image" content="https://i.imgur.com/El8IXYd.png" />
       </Head>
-
-
-
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
       <Global styles={css(externalCss)} />
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
-
       <Main>
         <HeadContainer>
           <Header />
@@ -65,10 +63,13 @@ const Theme = ({ state }) => {
           <Post when={data.isPostType} />
           <AboutUs when={data.isAbout} />
           <Investment when={data.isInvestment} />
-          <StakeFlow when={data.isStakeFlow} />
-          <Wallet when={data.isWallet} />
+          {/* <StakeFlow when={data.isStakeFlow} /> */}
+          {/* <Wallet when={data.isWallet} /> */}
           <PageError when={data.isError} />
+          <ComingSoon when={data.isStakeFlow || data.isAntliaFaucet || data.isAntliaWallet || data.isAntliaExplorer || data.isAntliaBlockchain || data.isAntliaExchange} />
           <Blog when={data.isBlog} />
+          <Events when={data.isEvents} />
+          <PrivacyPolicy when={data.isPrivacy} />
         </Switch>
         <Footer props={state.router.link} />
       </Main>

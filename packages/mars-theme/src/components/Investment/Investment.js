@@ -1,19 +1,17 @@
 import React from "react";
-// import MainNavbar from "../Common/MainNavbar";
-// import Footer from "../Common/Footer";
 import { Row, Col } from "reactstrap";
 import antliainvest from '../../assets/antlia1-invest.png';
 import InvestmentForm from "../InvestmentForm/InvestmentForm";
-// import ContactUs from "../ContactUs/ContactUs";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import { websiteLink } from "../../store/config";
 
 const Investment = () => {
     return (
         <div style={{ width: '100%' }}>
-             <Helmet>
+            <Helmet>
                 <meta charSet="utf-8" />
                 <title>Investment</title>
-                <link rel="canonical" href="https://antlia.io/investment" />
+                <link rel="canonical" href={websiteLink + "/investment"} />
                 <meta name="title" content="Invest in Antlia | An Incredible Investment opportunity " />
                 <meta name="description" content="Antlia is offering an incredible investment opportunity through this private sale. Antlia Network is seeking the right investors to help co-create the Blockchain-to- Blockchain and Blockchain-to-Oracle communication systems. As an investor, we see you as an important part of the community." />
             </Helmet>
@@ -25,7 +23,7 @@ const Investment = () => {
                                 <h1>Thanks for your interest in Antlia's Private Token Sale.</h1>
                                 <p>
                                     Antlia is offering an incredible investment opportunity through this private sale. We will personally guide you through the investment process. Please in the form below to begin your journey.
-                  </p>
+                                </p>
                             </div>
                         </div>
                         <div className="banner-image">
@@ -44,19 +42,19 @@ const Investment = () => {
                                 <p>
                                     This sale is only available to those who have been specifically invited.
                                     If you have not received an invite, contact us about availability at contact@antlia.io.
-                        </p>
+                                </p>
                                 <p>
                                     Antlia Network is seeking the right investors to help co-create the Blockchain-to-
                                     Blockchain and Blockchain-to-Oracle communication systems. As an investor,
                                     we see you as an important part of the community.
-                        </p>
+                                </p>
                             </div>
                         </Col>
                         <Col lg={2} md={1} sm={12} />
                     </Row>
                 </div>
             </section>
-            <InvestmentForm/>
+            <InvestmentForm />
         </div>
     );
 };

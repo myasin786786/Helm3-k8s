@@ -33,15 +33,15 @@ const stakeFlowHandler = {
   }
 }
 
-const walletHandler = {
-  pattern: "/wallet",
-  func: ({ route, state }) => {
-    Object.assign(state.source.data[route], {
-      type: "page",
-      isWallet: true,
-    })
-  }
-}
+// const walletHandler = {
+//   pattern: "/wallet",
+//   func: ({ route, state }) => {
+//     Object.assign(state.source.data[route], {
+//       type: "page",
+//       isWallet: true,
+//     })
+//   }
+// }
 
 const blogHandler = {
   pattern: "/blog",
@@ -49,6 +49,76 @@ const blogHandler = {
     Object.assign(state.source.data[route], {
       type: "page",
       isBlog: true,
+    })
+  }
+}
+
+const eventsHandler = {
+  pattern: "/events",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isEvents: true,
+    })
+  }
+}
+
+const privacyHandler = {
+  pattern: "/privacy-policy",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPrivacy: true,
+    })
+  }
+}
+
+const antliaFaucet = {
+  pattern: "/antlia-faucet",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isAntliaFaucet: true,
+    })
+  }
+}
+
+const antliaWallet = {
+  pattern: "/antlia-wallet",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isAntliaWallet: true,
+    })
+  }
+}
+
+const antliaExplorer = {
+  pattern: "/antlia-explorer",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isAntliaExplorer: true,
+    })
+  }
+}
+
+const antliaBlockchain = {
+  pattern: "/antlia-blockchain",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isAntliaBlockchain: true,
+    })
+  }
+}
+
+const antliaExchange = {
+  pattern: "/antlia-exchange",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isAntliaExchange: true,
     })
   }
 }
@@ -88,8 +158,15 @@ const marsTheme = {
         libraries.source.handlers.push(teamHandler);
         libraries.source.handlers.push(investHandler);
         libraries.source.handlers.push(stakeFlowHandler);
-        libraries.source.handlers.push(walletHandler);
+        // libraries.source.handlers.push(walletHandler);
         libraries.source.handlers.push(blogHandler);
+        libraries.source.handlers.push(antliaFaucet);
+        libraries.source.handlers.push(antliaWallet);
+        libraries.source.handlers.push(antliaExplorer);
+        libraries.source.handlers.push(eventsHandler);
+        libraries.source.handlers.push(antliaBlockchain);
+        libraries.source.handlers.push(antliaExchange);
+        libraries.source.handlers.push(privacyHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

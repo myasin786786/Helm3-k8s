@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { connect, styled } from "frontity";
 import Link from "./link";
 import List from "./list";
@@ -7,6 +7,7 @@ import { structuredData } from "../store/SEO/Blog/structuredData";
 import { Row, Col } from "reactstrap";
 
 const Post = ({ state, actions, libraries }) => {
+  const [postType, setPostType] = useState(0);
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
   // Get the data of the post.
@@ -27,6 +28,7 @@ const Post = ({ state, actions, libraries }) => {
   useEffect(() => {
     actions.source.fetch("/");
     List.preload();
+    post.categories.filter((res) => setPostType(res))
   }, []);
 
   // Load the post, but only if the data is ready.
@@ -42,10 +44,16 @@ const Post = ({ state, actions, libraries }) => {
               <Col lg={2} />
               <Col lg={8} sm={12}>
                 <div className="about-desc">
-                  <div>
-                    <h2>Antlia Blog Details</h2>
-                    <p>Through Antlia we give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user experience. To do this we’ve built a hardcore team of entrepreneurs, engineers and researchers with which we can literally build rockets.</p>
-                  </div>
+                  {postType === 2 ?
+                    <div>
+                      <h2>Antlia Blog Details</h2>
+                      <p>Through Antlia we give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user experience. To do this we’ve built a hardcore team of entrepreneurs, engineers and researchers with which we can literally build rockets.</p>
+                    </div>
+                    :
+                    <div>
+                      <h2>Antlia Media</h2>
+                    </div>
+                  }
                 </div>
               </Col>
               <Col lg={2} />
@@ -56,12 +64,9 @@ const Post = ({ state, actions, libraries }) => {
           <Row className="blog-details">
             <Col lg={12}>
               <div className="blog-box">
-                <h4><div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div></h4>
+                <h4>{post.title.rendered}</h4>
                 <div className="likes-date">
                   <div className="like-view">
-                    {/* <span className="likes"><i className="fa fa-heart"></i> <p>1,234</p></span> */}
-
-                    {/* <span className="views"><i className="fa fa-eye"></i>&nbsp;<p>{info.views}&nbsp;views</p></span> */}
                   </div>
                   <div className="date">
                     <p>{date}</p>
@@ -74,13 +79,11 @@ const Post = ({ state, actions, libraries }) => {
                 </div>
                 <div className="blog-content">
                   <div className="desc">
-                    {/* {this.state.contentEditor ? <Editor initialContentState={this.state.contentEditor} readOnly={true} toolbarHidden
-                    editorClassName="demo-editor" /> : ""} */}
                     <Content>
                       <Html2React html={post.content.rendered} />
                     </Content>
                   </div>
-                  <Link link="/blog">Back to list</Link>
+                  <Link link={postType === 2 ? "/blog" : "/events"}>Back to list</Link>
                 </div>
               </div>
             </Col>
