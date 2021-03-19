@@ -53,7 +53,7 @@ class ContactUs extends React.Component {
       subject: this.state.subject,
       message: this.state.message,
       country: this.state.country,
-      phonenumber: this.state.phone,
+      phonenumber: this.state.code + this.state.phone,
     };
     axios
       .post(ApiUrl + "rnsadmin/contactAdd", data)
@@ -94,7 +94,7 @@ class ContactUs extends React.Component {
       selectedCountry: event.target.value,
     });
   };
-  onhandleBlur = (event) => {
+  onhandleBlur = () => {
     this.setState({
       touched: { ...this.state.touched, selectedCountry: true },
     });
@@ -521,6 +521,7 @@ class ContactUs extends React.Component {
                                   this.state.phone === "" ||
                                   this.state.subject === "" ||
                                   this.state.country === "" ||
+                                  this.state.value === "" ||
                                   Object.keys(errors).length !== 0
                                 }
                                 onClick={this.submitFormHandler}

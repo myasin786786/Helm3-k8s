@@ -33,7 +33,7 @@ const AboutUs = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>About Us</title>
-                <link rel="canonical" href={websiteLink + "/aboutus"} />
+                <link rel="canonical" href={websiteLink + "/about-us"} />
                 <meta name="title" content="Learn more about us and the team." />
                 <meta name="description" content="Antlia is committed to bringing huge improvement in blockchain speed, scale, cost and user experience. Our dedicated team of entrepreneurs, engineers and researchers are passionately working to achieve this goal." />
             </Helmet>

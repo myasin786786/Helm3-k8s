@@ -4,7 +4,7 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
 const teamHandler = {
-  pattern: "/aboutus",
+  pattern: "/about-us",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

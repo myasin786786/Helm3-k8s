@@ -118,7 +118,7 @@ class MainNavbar extends React.Component {
                   </NavItem>
                   <NavItem className="nav-item1">
                     <Link
-                      link="/aboutus"
+                      link="/about-us"
                       onClick={scrollToTop}
                       spy={"true"}
                       smooth={"true"}

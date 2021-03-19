@@ -51,7 +51,7 @@ class InvestmentForm extends React.Component {
       name: this.state.name,
       email: this.state.email,
       country: this.state.country,
-      phonenumber: this.state.phone,
+      phonenumber: this.state.code + this.state.phone,
       amount: this.state.amount,
       currency: this.state.currency,
       reason: this.state.reason,
@@ -96,7 +96,7 @@ class InvestmentForm extends React.Component {
       selectedCountry: event.target.value,
     });
   };
-  onhandleBlur = (event) => {
+  onhandleBlur = () => {
     this.setState({
       touched: { ...this.state.touched, selectedCountry: true },
     });
@@ -444,7 +444,7 @@ class InvestmentForm extends React.Component {
                             <FormGroup>
                               <Label className="label">How much you want to investment in Antlia?</Label>
                               <Input
-                                type="text"
+                                type="number"
                                 placeholder="Enter amount"
                                 className="form-control"
                                 name="amount"
@@ -497,7 +497,7 @@ class InvestmentForm extends React.Component {
                           <Col lg={12}>
                             <FormGroup check>
                               <Label check>
-                                <Input type="checkbox" value={this.state.check} onChange={() => this.setState({ check: !check })} />{' '}
+                                <Input type="checkbox" value={this.state.check} onChange={() => this.setState({ check: !this.state.check })} />
                                 I agree that Antlia may contact me using information above*
                               </Label>
                             </FormGroup>
@@ -516,7 +516,6 @@ class InvestmentForm extends React.Component {
                                   this.state.currency === "" ||
                                   this.state.reason === "" || !this.state.check
                                 }
-
                                 onClick={this.submitFormHandler}
                                 type="submit"
                               >

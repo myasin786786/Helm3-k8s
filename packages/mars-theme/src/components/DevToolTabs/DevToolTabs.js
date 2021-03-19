@@ -20,8 +20,8 @@ const DevToolTabs = () => {
             className={classnames({ active: activeTab === '1' })}
             onClick={() => { toggle('1'); }}
           >
-            <img src={rust} alt="Rust" className="lang-img" />
-            <span>Rust</span>
+            <img src={golang} alt="Golang" className="lang-img" />
+            <span>Go</span>
           </NavLink>
         </NavItem>
         <NavItem>
@@ -38,13 +38,13 @@ const DevToolTabs = () => {
             className={classnames({ active: activeTab === '3' })}
             onClick={() => { toggle('3'); }}
           >
-            <img src={golang} alt="Golang" className="lang-img" />
-            <span>Go</span>
+            <img src={rust} alt="Rust" className="lang-img" />
+            <span>Rust</span>
           </NavLink>
         </NavItem>
       </Nav>
       <TabContent activeTab={activeTab}>
-        <TabPane tabId="1">
+        <TabPane tabId="3">
           <SyntaxHighlighter language="rust" style={tomorrowNightBlue} wrapLongLines={true}>
             {`
 use near_sdk::{near_bindgen, env};
@@ -144,7 +144,7 @@ impl StatusMessage {
                     `}
           </SyntaxHighlighter>
         </TabPane>
-        <TabPane tabId="3">
+        <TabPane tabId="1">
 
           <SyntaxHighlighter language="go" style={tomorrowNightBlue} wrapLongLines={true}>
             {`
