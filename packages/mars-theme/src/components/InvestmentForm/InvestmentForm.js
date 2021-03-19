@@ -5,103 +5,6 @@ import { NotificationContainer, NotificationManager } from 'react-notifications'
 import { ApiUrl } from "../../store/config";
 import axios from "axios";
 
-// var schema = {
-//   name: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.nameerror"
-//           defaultMessage="Name must be filled."
-//         />
-//       ),
-//     },
-//   },
-//   email: {
-//     email: {
-//       message: (
-//         <FormattedMessage
-//           id="contact.emailerror"
-//           defaultMessage="Email must be valid."
-//         />
-//       ),
-//     },
-//   },
-//   phone: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.phoneerror"
-//           defaultMessage="Phone must be entered."
-//         />
-//       ),
-//     },
-//   },
-//   country: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.countryerror"
-//           defaultMessage="Country must be selected."
-//         />
-//       ),
-//     },
-//   },
-//   selectedCountry: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.countryerror"
-//           defaultMessage="Country must be selected."
-//         />
-//       ),
-//     },
-//   },
-//   amount: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.subjecterror"
-//           defaultMessage="Amount must be entered."
-//         />
-//       ),
-//     },
-//   },
-//   currency: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.subjecterror"
-//           defaultMessage="Currency must be entered."
-//         />
-//       ),
-//     },
-//   },
-//   reason: {
-//     presence: true,
-//     length: {
-//       minimum: 1,
-//       message: (
-//         <FormattedMessage
-//           id="contact.messageerror"
-//           defaultMessage="Reason must be mentioned."
-//         />
-//       ),
-//     },
-//   },
-// };
-
 class InvestmentForm extends React.Component {
   state = {
     name: "",
@@ -125,7 +28,6 @@ class InvestmentForm extends React.Component {
     },
     errors: {},
   };
-
   onChangeHandler = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -134,7 +36,6 @@ class InvestmentForm extends React.Component {
       touched: { ...this.state.touched, [event.target.name]: true },
     });
   };
-
   onPhoneHandler = (event) => {
     const re = /^[0-9\b]+$/;
     if (event.target.value === "" || re.test(event.target.value)) {
@@ -144,7 +45,6 @@ class InvestmentForm extends React.Component {
       touched: { ...this.state.touched, [event.target.name]: true },
     });
   };
-
   submitFormHandler = (event) => {
     event.preventDefault();
     let data = {
@@ -188,7 +88,6 @@ class InvestmentForm extends React.Component {
         NotificationManager.error(err.response.data.message);
       });
   };
-
   onSelectFlag = (event) => {
     let x = event.target.value.split(",");
     this.setState({
@@ -197,33 +96,17 @@ class InvestmentForm extends React.Component {
       selectedCountry: event.target.value,
     });
   };
-
   onhandleBlur = (event) => {
     this.setState({
       touched: { ...this.state.touched, selectedCountry: true },
     });
   };
-
   onCaptchaHandler = (value) => {
     this.setState({
       value: value,
     });
   };
-
-
   render() {
-    const {
-      name,
-      email,
-      phone,
-      country,
-      // selectedCountry,
-      amount,
-      currency,
-      reason,
-      check
-    } = this.state;
-
     let errors = validate(
       {
         name: this.state.name,
@@ -235,14 +118,11 @@ class InvestmentForm extends React.Component {
         currency: this.state.currency,
         reason: this.state.reason,
       },
-      // schema
     );
     errors = errors ? errors : {};
-
     return (
       <div>
         <section id="investment-form">
-          {/* Contact Us section */}
           <div className="container">
             <Row>
               <Col lg={2} md={1} sm={12} />
@@ -256,7 +136,6 @@ class InvestmentForm extends React.Component {
                           </h1>
                         <p>This investment form is for private sale only. If you are interested in investing in Antlia, fill up the following form: </p>
                       </div>
-                      {/* <h4>Send us a Message</h4> */}
                       <Form >
                         <Row>
                           <Col lg={12} md={12} sm={12}>
@@ -266,7 +145,6 @@ class InvestmentForm extends React.Component {
                                 type="text"
                                 name="name"
                                 placeholder="Enter name"
-                                // placeholder={nameplaceholder}
                                 className="form-control"
                                 onChange={this.onChangeHandler}
                                 value={this.state.name}
@@ -278,7 +156,6 @@ class InvestmentForm extends React.Component {
                               )}
                             </FormGroup>
                           </Col>
-
                           <Col lg={12} md={12} sm={12}>
                             <FormGroup>
                               <Label className="label">Email</Label>
@@ -286,7 +163,6 @@ class InvestmentForm extends React.Component {
                                 type="email"
                                 name="email"
                                 placeholder="Enter email"
-                                // placeholder={emailplaceholder}
                                 className="form-control"
                                 onChange={this.onChangeHandler}
                                 value={this.state.email}
@@ -305,7 +181,6 @@ class InvestmentForm extends React.Component {
                                 name="phone"
                                 type="text"
                                 placeholder="Enter number"
-                                // placeholder={phoneplaceholder}
                                 className="form-control"
                                 onChange={this.onPhoneHandler}
                                 value={this.state.phone}
@@ -316,7 +191,6 @@ class InvestmentForm extends React.Component {
                                 </FormText>
                               )}
                             </FormGroup>
-
                           </Col>
                           <Col lg={12} md={12} sm={12}>
                             <Label className="label">Country</Label>
@@ -329,7 +203,6 @@ class InvestmentForm extends React.Component {
                                 onChange={this.onSelectFlag}
                                 onBlur={this.onhandleBlur}
                               >
-                                {/* <option value="">{countryplaceholder}</option> */}
                                 <option value="">Select Country</option>
                                 <option value="+47,Norway">Norway </option>
                                 <option value="+44,UK">UK </option>
@@ -338,7 +211,7 @@ class InvestmentForm extends React.Component {
                                 <option value="+244,Angola">Angola </option>
                                 <option value="+1264,Anguilla">Anguilla </option>
                                 <option value="+1268, Antigua Barbuda">
-                                  Antigua &amp; Barbuda{" "}
+                                  Antigua &amp; Barbuda
                                 </option>
                                 <option value="+54,Argentina">Argentina </option>
                                 <option value="+374,Armenia">Armenia </option>
@@ -370,7 +243,7 @@ class InvestmentForm extends React.Component {
                                 <option value="+238,Cape Verde Islands">Cape Verde Islands </option>
                                 <option value="+1345,Cayman Islands">Cayman Islands </option>
                                 <option value="+236,Central African Republic">
-                                  Central African Republic{" "}
+                                  Central African Republic
                                 </option>
                                 <option value="+56,Chile">Chile </option>
                                 <option value="+86,China">China </option>
@@ -500,7 +373,7 @@ class InvestmentForm extends React.Component {
                                 <option value="+250,Rwanda">Rwanda </option>
                                 <option value="+378,San Marino">San Marino </option>
                                 <option value="+239,Sao Tome Principe">
-                                  Sao Tome &amp; Principe{" "}
+                                  Sao Tome &amp; Principe
                                 </option>
                                 <option value="+966,Saudi Arabia">Saudi Arabia </option>
                                 <option value="+221,Senegal">Senegal </option>
@@ -530,13 +403,13 @@ class InvestmentForm extends React.Component {
                                 <option value="+228,Togo">Togo </option>
                                 <option value="+676,Tonga">Tonga </option>
                                 <option value="+1868,Trinidad Tobago">
-                                  Trinidad &amp; Tobago{" "}
+                                  Trinidad &amp; Tobago
                                 </option>
                                 <option value="+216,Tunisia">Tunisia </option>
                                 <option value="+90,Turkey">Turkey </option>
                                 <option value="+993,Turkmenistan">Turkmenistan </option>
                                 <option value="+1649,Turks Caicos Islands">
-                                  Turks &amp; Caicos Islands{" "}
+                                  Turks &amp; Caicos Islands
                                 </option>
                                 <option value="+688,Tuvalu">Tuvalu </option>
                                 <option value="+256,Uganda">Uganda </option>
@@ -551,7 +424,7 @@ class InvestmentForm extends React.Component {
                                 <option value="+58,Venezuela">Venezuela </option>
                                 <option value="+84,Vietnam">Vietnam </option>
                                 <option value="+84,Virgin Islands - British">
-                                  Virgin Islands - British{" "}
+                                  Virgin Islands - British
                                 </option>
                                 <option value="+84,Virgin Islands - US">Virgin Islands - US </option>
                                 <option value="+681,Wallis  Futuna">Wallis &amp; Futuna </option>
@@ -572,7 +445,6 @@ class InvestmentForm extends React.Component {
                               <Label className="label">How much you want to investment in Antlia?</Label>
                               <Input
                                 type="text"
-                                // placeholder={amountplaceholder}
                                 placeholder="Enter amount"
                                 className="form-control"
                                 name="amount"
@@ -591,7 +463,6 @@ class InvestmentForm extends React.Component {
                               <Label className="label">Currency</Label>
                               <Input
                                 type="text"
-                                // placeholder={currencyplaceholder}
                                 placeholder="Enter currency"
                                 className="form-control"
                                 name="currency"
@@ -605,27 +476,17 @@ class InvestmentForm extends React.Component {
                               )}
                             </FormGroup>
                           </Col>
-
                           <Col lg={12}>
                             <Label className="label">Why are you participating in Antlia Token Sale?</Label>
                             <FormGroup>
                               <Input
                                 type="text"
-                                // placeholder={reasonplaceholder}
                                 placeholder="Enter reason"
                                 className="form-control"
                                 name="reason"
                                 onChange={this.onChangeHandler}
                                 value={this.state.reason}
                               />
-                              {/* <textarea
-                                placeholder={msgplaceholder}
-                                name="reason"
-                                rows="1"
-                                value={this.state.reason}
-                                onChange={this.onChangeHandler}
-                              ></textarea> */}
-
                               {this.state.touched.reason && (
                                 <FormText>
                                   {errors.reason && errors.reason[0]}
@@ -636,60 +497,30 @@ class InvestmentForm extends React.Component {
                           <Col lg={12}>
                             <FormGroup check>
                               <Label check>
-                                <Input type="checkbox" value={check} onChange={() => this.setState({ check: !check })} />{' '}
-          I agree that Antlia may contact me using information above*
-        </Label>
+                                <Input type="checkbox" value={this.state.check} onChange={() => this.setState({ check: !check })} />{' '}
+                                I agree that Antlia may contact me using information above*
+                              </Label>
                             </FormGroup>
                           </Col>
                         </Row>
-                        {/* <Row>
-                          <Col lg={12}>
-                            <div className="captcha-cont">
-                              <ReCAPTCHA
-                                style={{
-                                  transform: "scale(0.77)",
-                                  transformOrigin: "0 0"
-                                }}
-                                className="g-recaptcha"
-                                data-theme="light"
-                                sitekey="6Lc7kNoZAAAAAIwj_SJdHOpJl-0LH1L3DtW7SxAA"
-                                // sitekey="6LcMJWcUAAAAAPjW5BZV6BdS1f35y1cIAy9b3F2a"
-                                // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                                onChange={this.onCaptchaHandler}
-                                height="140px"
-                                width="100%"
-                              />
-                            </div>
-
-                          </Col>
-                        </Row> */}
                         <Row>
                           <Col lg={12} md={12} sm={12}>
                             <div className="submitbtn">
                               <Button
                                 disabled={
-                                  name === "" ||
-                                  email === "" ||
-                                  phone === "" ||
-                                  country === "" ||
-                                  amount === "" ||
-                                  currency === "" ||
-                                  reason === "" || !check
+                                  this.state.name === "" ||
+                                  this.state.email === "" ||
+                                  this.state.phone === "" ||
+                                  this.state.country === "" ||
+                                  this.state.amount === "" ||
+                                  this.state.currency === "" ||
+                                  this.state.reason === "" || !this.state.check
                                 }
 
                                 onClick={this.submitFormHandler}
                                 type="submit"
                               >
-                                {/* {investmentFormLoading ? (
-                                <Loader
-                                  type="ball-beat"
-                                  active={investmentFormLoading}
-                                />
-                              ) : (
-                               <> */}
-                               Submit
-                               {/* </>
-                              )} */}
+                                Submit
                               </Button>
                             </div>
                             <NotificationContainer />
@@ -710,4 +541,3 @@ class InvestmentForm extends React.Component {
 }
 
 export default (InvestmentForm);
-// export default injectIntl(InvestmentForm);

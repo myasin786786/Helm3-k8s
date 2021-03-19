@@ -1,4 +1,5 @@
-import { gtmId, wordPressLink } from './packages/mars-theme/src/store/config'
+import { gtmId, wordPressLink } from './packages/mars-theme/src/store/config';
+
 const settings = {
   "name": "antlia-web-frontity",
   "state": {
@@ -18,26 +19,6 @@ const settings = {
               "Home",
               "/"
             ],
-            [
-              "Team",
-              "/team"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
           ],
           "featured": {
             "showOnList": true,

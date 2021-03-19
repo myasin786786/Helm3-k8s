@@ -107,7 +107,7 @@ const Post = ({ state, actions, libraries }) => {
     //           </StyledLink>
     //         )}
     //         <DateWrapper>
-    //           {" "}
+    //           
     //           on <b>{date.toDateString()}</b>
     //         </DateWrapper>
     //       </div>

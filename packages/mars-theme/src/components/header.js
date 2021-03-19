@@ -1,17 +1,5 @@
 import React from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  // DropdownItem,
-  // Dropdown,
-} from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu } from "reactstrap";
 import { animateScroll as scroll } from "react-scroll";
 import Link from "./link";
 import logoWhite from "../assets/white.svg";
@@ -19,13 +7,11 @@ import logoColored from "../assets/color.svg";
 import explorer from "../assets/antliaexplorer.svg";
 import wallet from "../assets/antliawallet.svg";
 import faucet from "../assets/antliafaucet.svg";
-// import { Link as NavLink } from "react-scroll";
 
 class MainNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
-    // this.closeNavbar = this.closeNavbar.bind(this);
     this.state = {
       isOpen: false,
       isOpen1: false,
@@ -61,10 +47,6 @@ class MainNavbar extends React.Component {
   componentDidMount() {
     let nav = document.getElementById("navbar");
     nav.classList.add("transparent-nav");
-
-    // nav[0].style.background = 'transparent';
-    // nav[0].style.position = 'absolute';
-    // nav[0].style.boxShadow = 'none';
     window.addEventListener("scroll", this.handleScroll);
   }
   componentWillUnmount() {
@@ -84,7 +66,6 @@ class MainNavbar extends React.Component {
       nav.classList.remove("bgcolornav");
     }
   }
-
   render() {
     const scrollToTop = () => {
       scroll.scrollToTop();
@@ -94,7 +75,7 @@ class MainNavbar extends React.Component {
         <div className="transparedNav">
           <Navbar id="navbar" light expand="md">
             <div className="container">
-              <NavbarBrand tag={Link} link={"/"} onClick={scrollToTop}>
+              <NavbarBrand tag={Link} link="/" onClick={scrollToTop}>
                 <img src={logoWhite} alt="Antlia logo" className="logodes" />
                 <img src={logoColored} alt="Antlia logo" className="logores" />
               </NavbarBrand>
@@ -105,9 +86,6 @@ class MainNavbar extends React.Component {
                   <NavItem className="nav-item1">
                     <Link
                       link="/"
-                      //   onClick={scrollToTop, () => {
-                      //   this.toggleClose();
-                      // }}
                       onClick={scrollToTop}
                       spy={"true"}
                       smooth={"true"}
@@ -123,7 +101,6 @@ class MainNavbar extends React.Component {
                       spy={"true"}
                       smooth={"true"}
                       duration={500}
-                    // className="isDisabled"
                     >
                       StakeFlow
                     </Link>
@@ -172,24 +149,18 @@ class MainNavbar extends React.Component {
                           <h2>Access the Chain</h2>
                           <div className="chain-list">
                             <Link link="/antlia-faucet"
-                              // target="_blank"
-                              // rel="noopener noreferrer"
                               className="single-item">
                               <img src={faucet} alt="Antlia Faucet" />
                               <h4>Antlia Faucet<i className="fa fa-external-link"></i></h4>
                               <p>Antlia faucet will give the user a small amount of  ANA coins for testing and better understanding of the system.</p>
                             </Link>
                             <Link link="/antlia-wallet"
-                              // target="_blank"
-                              // rel="noopener noreferrer"
                               className="single-item">
                               <img src={wallet} alt="Antlia Wallet" />
                               <h4>Antlia Wallet <i className="fa fa-external-link"></i></h4>
                               <p>Antlia's Multicoin Wallet will be non-custodial wallet having support for ANA and BNB coin. It will be in variety of versions, mobile, web, browser, extension & nano ledger.</p>
                             </Link>
                             <Link link="/antlia-explorer"
-                              // target="_blank"
-                              // rel="noopener noreferrer"
                               className="single-item">
                               <img src={explorer} alt="Antlia Explorer" />
                               <h4>Antlia Explorer <i className="fa fa-external-link"></i></h4>
@@ -198,20 +169,8 @@ class MainNavbar extends React.Component {
                           </div>
                         </div>
                       </div>
-                      {/* <DropdownItem><Link link="#">Dropdown 1</Link></DropdownItem> */}
                     </DropdownMenu>
                   </UncontrolledDropdown>
-                  {/* <NavItem className="nav-item1" id="contactbtn">
-                    <NavLink link="contactscroll"
-                      onClick={() => {
-                        this.toggleClose();
-                      }}
-                      spy={"true"}
-                      smooth={"true"}
-                      duration={500} className="contactbtn">
-                      Contact
-                    </NavLink>
-                  </NavItem> */}
                 </Nav>
               </Collapse>
             </div>

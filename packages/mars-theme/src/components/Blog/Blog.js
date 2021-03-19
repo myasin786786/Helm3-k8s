@@ -64,9 +64,6 @@ const Blog = ({ state, actions }) => {
                                                     <div className="blog-content">
                                                         <h2>{item.title.rendered}</h2>
                                                         <div className="likes-date">
-                                                            {/* <div className="like-view">
-                                    <span className="views"><i className="fa fa-eye"></i><p>{info.fields.views.integerValue}&nbsp;views</p></span>
-                                  </div> */}
                                                             <div className="date">
                                                                 <p>{date}</p>
                                                             </div>
@@ -93,9 +90,6 @@ const Blog = ({ state, actions }) => {
                                                     <div className="blog-content">
                                                         <h2>{item.title.rendered}</h2>
                                                         <div className="likes-date">
-                                                            {/* <div className="like-view">
-                                <span className="views"><i className="fa fa-eye"></i> <p>{info.fields.views.integerValue}&nbsp;views</p></span>
-                              </div> */}
                                                             <div className="date">
                                                                 <p>{date}</p>
                                                             </div>
@@ -118,9 +112,6 @@ const Blog = ({ state, actions }) => {
                                         <Col lg={4} md={6} sm={12} xs={12} key={index}>
                                             <div className="blog-box" onClick={() => actions.router.set(item.link)}>
                                                 <div className="num-img">
-                                                    {/* <div className="num">
-                        <span className="count">{index+1}</span>
-                      </div> */}
                                                     <div className="blog-img img-hover-zoom--slowmo">
                                                         {state.theme.featured.showOnList && (
                                                             <FeaturedMedia id={item.featured_media} />
@@ -130,9 +121,6 @@ const Blog = ({ state, actions }) => {
                                                 <div className="blog-content">
                                                     <h4>{item.title.rendered}</h4>
                                                     <div className="likes-date">
-                                                        {/* <div className="like-view">
-                          <span className="views"><i className="fa fa-eye"></i> <p>{info.fields.views.integerValue}&nbsp;views</p></span>
-                        </div> */}
                                                         <div className="date">
                                                             <p>{date}</p>
                                                         </div>

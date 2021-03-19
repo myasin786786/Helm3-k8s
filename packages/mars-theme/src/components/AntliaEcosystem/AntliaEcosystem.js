@@ -5,55 +5,53 @@ import Investor from '../../assets/Investor.png';
 import Government from '../../assets/Government.png';
 import Academia from '../../assets/Academia.png';
 
-class AntliaEcosystem extends React.Component {
-  render() {
-    return (
-      <section id="ecosystem">
-        <div className="container">
-          <div className="antlia-ecosystem">
-            <div className="heading">
-              <div>
-                <h2>Antlia Ecosystem</h2>
-                <span className="under-line" />
-              </div>
+const AntliaEcosystem = () => {
+  return (
+    <section id="ecosystem">
+      <div className="container">
+        <div className="antlia-ecosystem">
+          <div className="heading">
+            <div>
+              <h2>Antlia Ecosystem</h2>
+              <span className="under-line" />
             </div>
-            <div className="system-list">
-              <div className="single-item">
-                <div className="img-box">
-                  <img src={DAppDev} alt="Dapp Developers" />
-                </div>
-                <p>Dapp Developers</p>
+          </div>
+          <div className="system-list">
+            <div className="single-item">
+              <div className="img-box">
+                <img src={DAppDev} alt="Dapp Developers" />
               </div>
-              <div className="single-item">
-                <div className="img-box">
-                  <img src={Validator} alt="Validator" />
-                </div>
-                <p>Validator</p>
+              <p>Dapp Developers</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Validator} alt="Validator" />
               </div>
-              <div className="single-item">
-                <div className="img-box">
-                  <img src={Investor} alt="Investors" />
-                </div>
-                <p>Investors</p>
+              <p>Validator</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Investor} alt="Investors" />
               </div>
-              <div className="single-item">
-                <div className="img-box">
-                  <img src={Government} alt="Government/ Enterprises" />
-                </div>
-                <p>Government/ Enterprises</p>
+              <p>Investors</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Government} alt="Government/ Enterprises" />
               </div>
-              <div className="single-item">
-                <div className="img-box">
-                  <img src={Academia} alt="Academia" />
-                </div>
-                <p>Academia</p>
+              <p>Government/ Enterprises</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Academia} alt="Academia" />
               </div>
+              <p>Academia</p>
             </div>
           </div>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }
 
 export default AntliaEcosystem;

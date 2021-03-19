@@ -7,13 +7,11 @@ import node from "../../assets/node.png";
 import rust from "../../assets/rust.png";
 import golang from "../../assets/golang.png";
 
-const DevToolTabs = (props) => {
+const DevToolTabs = () => {
   const [activeTab, setActiveTab] = useState('1');
-
   const toggle = tab => {
     if (activeTab !== tab) setActiveTab(tab);
   }
-
   return (
     <div className="tabs-comp">
       <Nav tabs>
@@ -68,7 +66,6 @@ impl StatusMessage {
         self.records.get(&account_id).cloned()
     }
 }
-
                     `}
           </SyntaxHighlighter>
         </TabPane>
@@ -141,11 +138,9 @@ impl StatusMessage {
                 }
             });
             
-            
             (function wait () {
                 setTimeout(wait, 1000);
-            })();
-                        
+            })();   
                     `}
           </SyntaxHighlighter>
         </TabPane>
@@ -157,7 +152,6 @@ package main
 
 import (
     "fmt"
-
     "github.com/hyperledger/fabric/core/chaincode/shim"
     "github.com/hyperledger/fabric/protos/peer"
 )
@@ -247,12 +241,10 @@ func main() {
         fmt.Println("SampleChaincode successfully started")
     }
 }
-
            `}
           </SyntaxHighlighter>
         </TabPane>
       </TabContent>
-      {/* <a href="#" className="api-link" target="_blank" rel="noopener noreferrer">Full API reference</a> */}
     </div>
   );
 }

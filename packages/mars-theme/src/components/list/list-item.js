@@ -30,7 +30,7 @@ const Item = ({ state, item }) => {
           </StyledLink>
         )}
         <PublishDate>
-          {" "}
+          
           on <b>{date.toDateString()}</b>
         </PublishDate>
       </div>

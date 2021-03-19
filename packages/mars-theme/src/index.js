@@ -33,16 +33,6 @@ const stakeFlowHandler = {
   }
 }
 
-// const walletHandler = {
-//   pattern: "/wallet",
-//   func: ({ route, state }) => {
-//     Object.assign(state.source.data[route], {
-//       type: "page",
-//       isWallet: true,
-//     })
-//   }
-// }
-
 const blogHandler = {
   pattern: "/blog",
   func: ({ route, state }) => {
@@ -142,8 +132,8 @@ const marsTheme = {
       menu: [],
       isMobileMenuOpen: false,
       featured: {
-        showOnList: false,
-        showOnPost: false,
+        showOnList: true,
+        showOnPost: true,
       },
     },
   },
@@ -158,7 +148,6 @@ const marsTheme = {
         libraries.source.handlers.push(teamHandler);
         libraries.source.handlers.push(investHandler);
         libraries.source.handlers.push(stakeFlowHandler);
-        // libraries.source.handlers.push(walletHandler);
         libraries.source.handlers.push(blogHandler);
         libraries.source.handlers.push(antliaFaucet);
         libraries.source.handlers.push(antliaWallet);

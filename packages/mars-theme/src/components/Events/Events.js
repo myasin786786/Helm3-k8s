@@ -69,9 +69,6 @@ const Events = ({ state, actions }) => {
                         <div className="blog-content">
                           <h4>{item.title.rendered}</h4>
                           <div className="likes-date">
-                            {/* <div className="like-view">
-                                <span className="views"><i className="fa fa-eye"></i> <p>{info.data.views}&nbsp;views</p></span>
-                              </div> */}
                             <div className="date">
                               <p>{date}</p>
                             </div>

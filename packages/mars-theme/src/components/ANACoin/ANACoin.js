@@ -5,53 +5,51 @@ import Transaction from '../../assets/Transactions.png';
 import SmartContract from '../../assets/SmartContracts.png';
 import Validator from '../../assets/Validator.png';
 
-class ANACoin extends React.Component {
-  render() {
-    return (
-      <section id="ana-coin">
-          <div className="container">
-            <div className="ana-coins">
-              <div className="heading">
-                <h2>The ANA Coin</h2>
-                <p>The ANA Coin is a unit of value that is native to the Antlia Blockchain. ARC based token can be generated using WASM based smart contract at Antlia Blockchain. Any asset can be used for the gas and rewards for staking. Currently,  ANA coin will be used for Gas and staking purpose  at Antlia Blockchain Network.</p>
+const ANACoin = () => {
+  return (
+    <section id="ana-coin">
+      <div className="container">
+        <div className="ana-coins">
+          <div className="heading">
+            <h2>The ANA Coin</h2>
+            <p>The ANA Coin is a unit of value that is native to the Antlia Blockchain. ARC based token can be generated using WASM based smart contract at Antlia Blockchain. Any asset can be used for the gas and rewards for staking. Currently,  ANA coin will be used for Gas and staking purpose  at Antlia Blockchain Network.</p>
+          </div>
+          <div className="coin-list">
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Governace} alt="Governance" />
               </div>
-              <div className="coin-list">
-                <div className="single-item">
-                  <div className="img-box">
-                    <img src={Governace} alt="Governance" />
-                  </div>
-                  <p>Governance</p>
-                </div>
-                <div className="single-item">
-                  <div className="img-box">
-                    <img src={Staking} alt="Stacking" />
-                  </div>
-                  <p>Stacking</p>
-                </div>
-                <div className="single-item">
-                  <div className="img-box">
-                    <img src={Transaction} alt="Transactions" />
-                  </div>
-                  <p>Transactions</p>
-                </div>
-                <div className="single-item">
-                  <div className="img-box">
-                    <img src={SmartContract} alt="Smart Contracts" />
-                  </div>
-                  <p>Smart Contracts</p>
-                </div>
-                <div className="single-item">
-                  <div className="img-box">
-                    <img src={Validator} alt="Validator Rewards" />
-                  </div>
-                  <p>Validator Rewards</p>
-                </div>
+              <p>Governance</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Staking} alt="Stacking" />
               </div>
+              <p>Stacking</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Transaction} alt="Transactions" />
+              </div>
+              <p>Transactions</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={SmartContract} alt="Smart Contracts" />
+              </div>
+              <p>Smart Contracts</p>
+            </div>
+            <div className="single-item">
+              <div className="img-box">
+                <img src={Validator} alt="Validator Rewards" />
+              </div>
+              <p>Validator Rewards</p>
             </div>
           </div>
-        </section>
-    );
-  }
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default ANACoin;

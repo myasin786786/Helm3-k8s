@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Form, FormGroup, Input, Label, Button } from "reactstrap";
+import { Row, Col, Form, FormGroup, FormText, Input, Label, Button } from "reactstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 import validate from "validate.js";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
@@ -24,12 +24,10 @@ class ContactUs extends React.Component {
       message: false,
       country: false,
       phone: false,
-      // value: false,
       selectedCountry: false,
     },
     errors: {},
   };
-
   onChangeHandler = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -38,7 +36,6 @@ class ContactUs extends React.Component {
       touched: { ...this.state.touched, [event.target.name]: true },
     });
   };
-
   onPhoneHandler = (event) => {
     const re = /^[0-9\b]+$/;
     if (event.target.value === "" || re.test(event.target.value)) {
@@ -48,7 +45,6 @@ class ContactUs extends React.Component {
       touched: { ...this.state.touched, [event.target.name]: true },
     });
   };
-
   submitFormHandler = (event) => {
     event.preventDefault();
     let data = {
@@ -98,33 +94,20 @@ class ContactUs extends React.Component {
       selectedCountry: event.target.value,
     });
   };
-
   onhandleBlur = (event) => {
     this.setState({
       touched: { ...this.state.touched, selectedCountry: true },
     });
   };
-
   onCaptchaHandler = (value) => {
     this.setState({
       value: value,
     });
   };
-
   pickcode(e) {
     this.setState({ code: "+" + e.target.value, Country: e.target.value });
   }
   render() {
-    const {
-      name,
-      email,
-      message,
-      phone,
-      subject,
-      country,
-      selectedCountry,
-    } = this.state;
-
     let errors = validate(
       {
         name: this.state.name,
@@ -133,17 +116,14 @@ class ContactUs extends React.Component {
         message: this.state.message,
         phone: this.state.phone,
         country: this.state.country,
-        // value: this.state.value,
-        selectedCountry: selectedCountry,
+        selectedCountry: this.state.selectedCountry,
       },
     );
     errors = errors ? errors : {};
-
     return (
       <div>
         <section id="contact">
           <div className="contactbg">
-            {/* Contact Us section */}
             <div className="container">
               <div className="form-content">
                 <Row>
@@ -159,26 +139,8 @@ class ContactUs extends React.Component {
                         requested from us. Antlia team would like to
                         contact you about our products and services,
                         well as other content that may be of interest
-to you. If you consent to us, please contact you.</p>
+                        to you. If you consent to us, please contact you.</p>
                       </div>
-                      {/* <Row>
-                        <Col lg={2} md={2} sm={2}>
-                          <div className="iconbox">
-                            <img src={mail} alt="Mail" />
-                          </div>
-                        </Col>
-                        <Col lg={10} md={10} sm={10}>
-                          <div className="address-box">
-                            <h4>
-                              <FormattedMessage
-                                id="contact.mail"
-                                defaultMessage="Mail"
-                              />
-                            </h4>
-                            <p>contact@rnssol.com</p>
-                          </div>
-                        </Col>
-                      </Row> */}
                     </div>
                   </Col>
                   <Col lg={6} md={12}>
@@ -197,11 +159,11 @@ to you. If you consent to us, please contact you.</p>
                                 onChange={this.onChangeHandler}
                                 value={this.state.name}
                               />
-                              {/* {this.state.touched.name && (
+                              {this.state.touched.name && (
                                 <FormText>
                                   {errors.name && errors.name[0]}
                                 </FormText>
-                              )} */}
+                              )}
                             </FormGroup>
                           </Col>
                           <Col lg={6} md={6} sm={12}>
@@ -215,11 +177,11 @@ to you. If you consent to us, please contact you.</p>
                                 onChange={this.onChangeHandler}
                                 value={this.state.email}
                               />
-                              {/* {this.state.touched.email && (
+                              {this.state.touched.email && (
                                 <FormText>
                                   {errors.email && errors.email[0]}
                                 </FormText>
-                              )} */}
+                              )}
                             </FormGroup>
                           </Col>
                         </Row>
@@ -229,7 +191,6 @@ to you. If you consent to us, please contact you.</p>
                             <FormGroup>
                               <select
                                 name="countryCode"
-                                id=""
                                 className="form-control"
                                 value={this.state.selectedCountry}
                                 onChange={this.onSelectFlag}
@@ -243,7 +204,7 @@ to you. If you consent to us, please contact you.</p>
                                 <option value="+244,Angola">Angola </option>
                                 <option value="+1264,Anguilla">Anguilla </option>
                                 <option value="+1268, Antigua Barbuda">
-                                  Antigua &amp; Barbuda{" "}
+                                  Antigua &amp; Barbuda
                                 </option>
                                 <option value="+54,Argentina">Argentina </option>
                                 <option value="+374,Armenia">Armenia </option>
@@ -275,7 +236,7 @@ to you. If you consent to us, please contact you.</p>
                                 <option value="+238,Cape Verde Islands">Cape Verde Islands </option>
                                 <option value="+1345,Cayman Islands">Cayman Islands </option>
                                 <option value="+236,Central African Republic">
-                                  Central African Republic{" "}
+                                  Central African Republic
                                 </option>
                                 <option value="+56,Chile">Chile </option>
                                 <option value="+86,China">China </option>
@@ -405,7 +366,7 @@ to you. If you consent to us, please contact you.</p>
                                 <option value="+250,Rwanda">Rwanda </option>
                                 <option value="+378,San Marino">San Marino </option>
                                 <option value="+239,Sao Tome Principe">
-                                  Sao Tome &amp; Principe{" "}
+                                  Sao Tome &amp; Principe
                                 </option>
                                 <option value="+966,Saudi Arabia">Saudi Arabia </option>
                                 <option value="+221,Senegal">Senegal </option>
@@ -435,13 +396,13 @@ to you. If you consent to us, please contact you.</p>
                                 <option value="+228,Togo">Togo </option>
                                 <option value="+676,Tonga">Tonga </option>
                                 <option value="+1868,Trinidad Tobago">
-                                  Trinidad &amp; Tobago{" "}
+                                  Trinidad &amp; Tobago
                                 </option>
                                 <option value="+216,Tunisia">Tunisia </option>
                                 <option value="+90,Turkey">Turkey </option>
                                 <option value="+993,Turkmenistan">Turkmenistan </option>
                                 <option value="+1649,Turks Caicos Islands">
-                                  Turks &amp; Caicos Islands{" "}
+                                  Turks &amp; Caicos Islands
                                 </option>
                                 <option value="+688,Tuvalu">Tuvalu </option>
                                 <option value="+256,Uganda">Uganda </option>
@@ -456,7 +417,7 @@ to you. If you consent to us, please contact you.</p>
                                 <option value="+58,Venezuela">Venezuela </option>
                                 <option value="+84,Vietnam">Vietnam </option>
                                 <option value="+84,Virgin Islands - British">
-                                  Virgin Islands - British{" "}
+                                  Virgin Islands - British
                                 </option>
                                 <option value="+84,Virgin Islands - US">Virgin Islands - US </option>
                                 <option value="+681,Wallis  Futuna">Wallis &amp; Futuna </option>
@@ -465,22 +426,16 @@ to you. If you consent to us, please contact you.</p>
                                 <option value="+260,Zambia">Zambia </option>
                                 <option value="+263,Zimbabwe">Zimbabwe </option>
                               </select>
-                              {/* {this.state.touched.selectedCountry && (
+                              {this.state.touched.selectedCountry && (
                                 <FormText>
                                   {errors.selectedCountry && errors.selectedCountry[0]}
                                 </FormText>
-                              )} */}
+                              )}
                             </FormGroup>
                           </Col>
-                          {/* </Row>
-                        <Row> */}
                           <Col lg={6} md={6} sm={12}>
                             <FormGroup>
                               <Label className="label">Phone</Label>
-                              {/* <div className="ctrycode">
-                                <span className="codeplace">
-                                  {this.state.code}
-                                </span> */}
                               <Input
                                 name="phone"
                                 type="text"
@@ -489,34 +444,12 @@ to you. If you consent to us, please contact you.</p>
                                 onChange={this.onPhoneHandler}
                                 value={this.state.phone}
                               />
-                              {/* </div> */}
-                              {/* {this.state.touched.phone && (
-                                <FormText>
-                                  {errors.phone && errors.phone[0]}
-                                </FormText>
-                              )} */}
-                            </FormGroup>
-                            {/* <FormGroup>
-                              <Label className="label">Phone</Label>
-                              <div className="ctrycode">
-                                <span className="codeplace">
-                                  {this.state.code}
-                                </span>
-                                <Input
-                                  name="phone"
-                                  type="text"
-                                  placeholder={phoneplaceholder}
-                                  className="input-setphone form-control"
-                                  onChange={this.onPhoneHandler}
-                                  value={this.state.phone}
-                                />
-                              </div>
                               {this.state.touched.phone && (
                                 <FormText>
                                   {errors.phone && errors.phone[0]}
                                 </FormText>
                               )}
-                            </FormGroup> */}
+                            </FormGroup>
                           </Col>
                         </Row>
                         <Row>
@@ -531,11 +464,11 @@ to you. If you consent to us, please contact you.</p>
                                 onChange={this.onChangeHandler}
                                 value={this.state.subject}
                               />
-                              {/* {this.state.touched.subject && (
+                              {this.state.touched.subject && (
                                 <FormText>
                                   {errors.subject && errors.subject[0]}
                                 </FormText>
-                              )} */}
+                              )}
                             </FormGroup>
                           </Col>
                         </Row>
@@ -551,19 +484,11 @@ to you. If you consent to us, please contact you.</p>
                                 onChange={this.onChangeHandler}
                                 value={this.state.message}
                               />
-                              {/* <textarea
-                                placeholder={msgplaceholder}
-                                name="message"
-                                rows="1"
-                                value={this.state.message}
-                                onChange={this.onChangeHandler}
-                              ></textarea> */}
-
-                              {/* {this.state.touched.message && (
+                              {this.state.touched.message && (
                                 <FormText>
                                   {errors.message && errors.message[0]}
                                 </FormText>
-                              )} */}
+                              )}
                             </FormGroup>
                           </Col>
                         </Row>
@@ -578,8 +503,6 @@ to you. If you consent to us, please contact you.</p>
                                 className="g-recaptcha"
                                 data-theme="light"
                                 sitekey="6Lc7kNoZAAAAAIwj_SJdHOpJl-0LH1L3DtW7SxAA"
-                                // sitekey="6LcMJWcUAAAAAPjW5BZV6BdS1f35y1cIAy9b3F2a"
-                                // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                 onChange={this.onCaptchaHandler}
                                 height="140px"
                                 width="100%"
@@ -592,25 +515,18 @@ to you. If you consent to us, please contact you.</p>
                             <div className="submitbtn">
                               <Button
                                 disabled={
-                                  name === "" ||
-                                  email === "" ||
-                                  message === "" ||
-                                  phone === "" ||
-                                  subject === "" ||
-                                  country === "" ||
+                                  this.state.name === "" ||
+                                  this.state.email === "" ||
+                                  this.state.message === "" ||
+                                  this.state.phone === "" ||
+                                  this.state.subject === "" ||
+                                  this.state.country === "" ||
                                   Object.keys(errors).length !== 0
                                 }
                                 onClick={this.submitFormHandler}
                                 type="submit"
                               >
-                                {/* {contactUsLoading ? (
-                                <Loader
-                                  type="ball-beat"
-                                  active={contactUsLoading}
-                                />
-                              ) : ( */}
-                               Submit
-                                {/* )} */}
+                                Submit
                               </Button>
                             </div>
                             <NotificationContainer />

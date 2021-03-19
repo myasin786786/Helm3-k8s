@@ -12,8 +12,6 @@ import Events from "./Events/Events";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
 import AboutUs from "./AboutUs/AboutUs";
 import Investment from "./Investment/Investment";
-// import StakeFlow from "./StakeFlow/StakeFlow";
-// import Wallet from "./Wallet/Wallet";
 import Blog from "./Blog/Blog";
 import externalCss from "./index.css";
 import { websiteLink } from '../store/config';
@@ -57,14 +55,11 @@ const Theme = ({ state }) => {
           <Header />
         </HeadContainer>
         <Switch>
-          {/* Add the header of the site. */}
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <AboutUs when={data.isAbout} />
           <Investment when={data.isInvestment} />
-          {/* <StakeFlow when={data.isStakeFlow} /> */}
-          {/* <Wallet when={data.isWallet} /> */}
           <PageError when={data.isError} />
           <ComingSoon when={data.isStakeFlow || data.isAntliaFaucet || data.isAntliaWallet || data.isAntliaExplorer || data.isAntliaBlockchain || data.isAntliaExchange} />
           <Blog when={data.isBlog} />

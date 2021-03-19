@@ -34,7 +34,7 @@ const List = ({ state }) => {
     // <Container>
     //   {data.isTaxonomy && (
     //     <Header>
-    //       {data.taxonomy}:{" "}
+    //       {data.taxonomy}:
     //       <b>{decode(state.source[data.taxonomy][data.id].name)}</b>
     //     </Header>
     //   )}
