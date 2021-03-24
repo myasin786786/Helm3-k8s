@@ -11948,6 +11948,23 @@ nav {
   overflow: hidden;
   width: 100%;
 }
+
+#tech-map .row {
+  display: flex;
+  justify-content: center;
+}
+#tech-map .item-box {
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.18);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.18);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.18);
+  border-radius: 5px;
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+#tech-map h4 {
+  margin: 1rem 0;
+}
 #tech-map p {
   font-size: 18px;
   font-weight: 400;

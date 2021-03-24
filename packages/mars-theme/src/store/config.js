@@ -10,8 +10,8 @@ const production = "http://18.221.121.169:4000/api";
 const staging = "http://3.15.22.214:4000/api";
 
 const gtmId = "GTM-PD6TLM2";
-const websiteLink = "https://staging-web.antlia.io";
-const wordPressLink = "https://wp.rnssol.com";
+const websiteLink = "https://antlia.io";
+const wordPressLink = "https://wp.antlia.io";
 
 let ApiUrl = "";
 // let ApiSocket ='';
