@@ -11,7 +11,6 @@ This project was bootstrapped with [Frontity](https://frontity.org/).
 
 ### Launch a development server
 
-
 ```
 npx frontity dev
 ```
