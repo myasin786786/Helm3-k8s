@@ -1,6 +1,4 @@
 import React from "react";
-import techroadmap from '../../assets/techroadmap.png';
-import techroadmapmobile from '../../assets/roadmapmobile.png';
 import { Col, Row } from "reactstrap";
 
 const TechnicalRoadmap = () => {
@@ -57,10 +55,6 @@ const TechnicalRoadmap = () => {
             </Row>
           </div>
         </div>
-      </div>
-      <div className="tech-roadmap">
-        <img src={techroadmap} alt="Technical Roadmap" className="desktop" />
-        <img src={techroadmapmobile} alt="Technical Roadmap" className="mobile" />
       </div>
     </section>
   );
