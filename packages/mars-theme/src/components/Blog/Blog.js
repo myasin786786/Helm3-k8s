@@ -11,11 +11,9 @@ const Blog = ({ state, actions }) => {
     const blogs = () => {
         setData([])
         if (Object.keys(state.source.category).length !== 0) {
-            Object.keys(state.source.category).reduce(() => {
-                const posts = getPostsFromCategory(state.source, 2)
-                setData(posts.reverse())
-                setLoading(false);
-            })
+            const posts = getPostsFromCategory(state.source, 2)
+            setData(posts.reverse())
+            setLoading(false);
         }
     }
     useEffect(() => {
@@ -74,8 +72,7 @@ const Blog = ({ state, actions }) => {
                                                 </div>
                                             </div>
                                         )
-                                    })
-                                    }
+                                    })}
                                 </Col>
                                 <Col lg={4} sm={12} className="right-blog">
                                     {data.slice(1, 3).map(({ type, id }, index) => {
@@ -100,8 +97,7 @@ const Blog = ({ state, actions }) => {
                                                 </div>
                                             </div>
                                         )
-                                    }
-                                    )}
+                                    })}
                                 </Col>
                             </Row>
                             <Row className="blog-list">
@@ -133,8 +129,7 @@ const Blog = ({ state, actions }) => {
                                             </div>
                                         </Col>
                                     )
-                                }
-                                )}
+                                })}
                             </Row>
                         </>
                 }
