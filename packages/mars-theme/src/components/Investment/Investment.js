@@ -7,7 +7,7 @@ import { websiteLink } from "../../store/config";
 
 const Investment = () => {
     return (
-        <div style={{ width: '100%' }}>
+        <div className="w-100">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Investment</title>

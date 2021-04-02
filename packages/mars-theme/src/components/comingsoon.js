@@ -15,7 +15,7 @@ const ComingSoon = () => {
 export default ComingSoon;
 
 const Container = styled.div`
-width: 100%;  
+  width: 100%;  
   max-width: 1140px;
   margin: 0 auto;
   padding: 24px;

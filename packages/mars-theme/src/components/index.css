@@ -14753,3 +14753,7 @@ width: 100%; }
                   .privacy .desc {
                     padding: 1.5rem;
                     margin: 1.5rem 0; } }
+                    .g-recaptcha {
+                      transform: scale(0.77);
+                      transform-origin: 0px 0px;
+                    }

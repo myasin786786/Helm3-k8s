@@ -496,10 +496,6 @@ class ContactUs extends React.Component {
                           <Col lg={12}>
                             <div className="captcha-cont">
                               <ReCAPTCHA
-                                style={{
-                                  transform: "scale(0.77)",
-                                  transformOrigin: "0 0"
-                                }}
                                 className="g-recaptcha"
                                 data-theme="light"
                                 sitekey="6Lc7kNoZAAAAAIwj_SJdHOpJl-0LH1L3DtW7SxAA"
