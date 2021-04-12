@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
@@ -23,6 +24,18 @@ import { websiteLink } from '../store/config';
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  useEffect(() => {
+    let name = 'antlia-web-frontity'
+    let version = '1.0.0'
+    const last_version = localStorage.getItem(`${name}-Version`)
+    if (!last_version) {
+      window.location.reload();
+    }
+    if (last_version !== version) {
+      localStorage.setItem(`${name}-Version`, version)
+      window.location.reload();
+    }
+  }, [])
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -44,6 +57,11 @@ const Theme = ({ state }) => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={websiteLink} />
         <meta property="og:image" content="https://i.imgur.com/El8IXYd.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={state.frontity.title} />
+        <meta name="twitter:description" content={state.frontity.description} />
+        <meta name="twitter:url" content={websiteLink} />
+        <meta name="twitter:image" content="https://i.imgur.com/El8IXYd.png" />
       </Head>
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
