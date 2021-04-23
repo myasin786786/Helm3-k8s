@@ -10,17 +10,13 @@ import Interoperable from './../Interoperable/Interoperable';
 import SmartContract from './../SmartContract/SmartContract';
 import ANACoin from './../ANACoin/ANACoin';
 import TechnicalRoadMap from './../TechnicalRoadmap/TechnicalRoadmap';
-import { structuredData } from "../../store/SEO/Homepage/structuredData";
 
-const List = ({ state }) => {
+const List = () => {
   // Get the data of the current list.
   // const data = state.source.get(state.router.link);
 
   return (
     <>
-      <script className="structured-data-list" type="application/ld+json">
-        {structuredData(state)}
-      </script>
       <MainBanner />
       <AntliaEcosystem />
       <Consensus />

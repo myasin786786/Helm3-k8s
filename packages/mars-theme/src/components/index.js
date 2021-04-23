@@ -16,6 +16,7 @@ import Investment from "./Investment/Investment";
 import Blog from "./Blog/Blog";
 import externalCss from "./index.css";
 import { websiteLink } from '../store/config';
+import { structuredData } from "../store/SEO/Homepage/structuredData";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -26,7 +27,7 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   useEffect(() => {
     let name = 'antlia-web-frontity'
-    let version = '1.0.0'
+    let version = '1.0.1'
     const last_version = localStorage.getItem(`${name}-Version`)
     if (!last_version) {
       window.location.reload();
@@ -62,6 +63,9 @@ const Theme = ({ state }) => {
         <meta name="twitter:description" content={state.frontity.description} />
         <meta name="twitter:url" content={websiteLink} />
         <meta name="twitter:image" content="https://i.imgur.com/El8IXYd.png" />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
       </Head>
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
