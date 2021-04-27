@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
@@ -25,18 +25,18 @@ import { structuredData } from "../store/SEO/Homepage/structuredData";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  useEffect(() => {
-    let name = 'antlia-web-frontity'
-    let version = '1.0.1'
-    const last_version = localStorage.getItem(`${name}-Version`)
-    if (!last_version) {
-      window.location.reload();
-    }
-    if (last_version !== version) {
-      localStorage.setItem(`${name}-Version`, version)
-      window.location.reload();
-    }
-  }, [])
+  // useEffect(() => {
+  //   let name = 'antlia-web-frontity'
+  //   let version = '1.0.1'
+  //   const last_version = localStorage.getItem(`${name}-Version`)
+  //   if (!last_version) {
+  //     window.location.reload();
+  //   }
+  //   if (last_version !== version) {
+  //     localStorage.setItem(`${name}-Version`, version)
+  //     window.location.reload();
+  //   }
+  // }, [])
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
