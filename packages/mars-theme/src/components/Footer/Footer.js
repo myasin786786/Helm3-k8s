@@ -59,6 +59,7 @@ const Footer = (props) => {
                 <h4>Help</h4>
                 <ul>
                   <li><Link link="/privacy-policy" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Privacy Policy</Link></li>
+                  <li><Link link="/sitemap" onClick={scrollToTop} spy={"true"} smooth={"true"} duration={500}>Sitemap</Link></li>
                   <li><a href="mailto:contact@antlia.io">contact@antlia.io</a></li>
                 </ul>
               </div>
