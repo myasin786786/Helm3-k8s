@@ -14757,3 +14757,20 @@ width: 100%; }
                       transform: scale(0.77);
                       transform-origin: 0px 0px;
                     }
+                    .sitemap-h2 {
+                      text-align: center;
+                      margin-top: 40px;
+                    }
+                    .sitemap-head{
+                      font-size: 20px;
+                    }
+                    .sitemap-list{
+                      margin-top: 30px;
+                      margin-left: 20px;
+                    }
+                    .sitemap-list li a {
+                      color: blue;
+                    }
+                    .sitemap-head a {
+                      color: blue;
+                    }

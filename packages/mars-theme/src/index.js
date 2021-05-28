@@ -33,6 +33,17 @@ const stakeFlowHandler = {
   }
 }
 
+const sitemapHandler = {
+  pattern: "/sitemap",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isSitemap: true,
+    })
+  }
+}
+
+
 const blogHandler = {
   pattern: "/blog",
   func: async ({ route, state, libraries }) => {
@@ -163,6 +174,7 @@ const marsTheme = {
         libraries.source.handlers.push(teamHandler);
         libraries.source.handlers.push(investHandler);
         libraries.source.handlers.push(stakeFlowHandler);
+        libraries.source.handlers.push(sitemapHandler);
         libraries.source.handlers.push(blogHandler);
         libraries.source.handlers.push(antliaFaucet);
         libraries.source.handlers.push(antliaWallet);
