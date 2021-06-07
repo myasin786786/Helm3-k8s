@@ -13,7 +13,7 @@ const SmartContract = () => {
           <Col lg={6} md={12}>
             <div className="desc">
               <div className="content">
-                <h2>Oracle with Trusted Smart Contract</h2>
+                <h2>Oracle with Trusted Smart Contracts</h2>
                 <p>Antlia oracles are built using web assembly based smart contracts. Antlia oracles can facilitate the transparent and trussless execution of smart contracts to bring data in and out of blockchain.</p>
                 <a
                   href="https://docs.antlia.io/"

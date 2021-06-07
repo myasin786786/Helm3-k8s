@@ -7,7 +7,7 @@ const TechnicalRoadmap = () => {
       <div className="container">
         <div className="heading">
           <div className="inner">
-            <h2>Technical Roadmap</h2>
+            <h2>Looking Forward | Technical Roadmap</h2>
             <p>Antlia is all set to launch its validator staking program by the end of 2021. The detailed roadmap shows us the milestones from an alpha release through to multiple betas and a targeted mainnet release.</p>
             <Row>
               <Col lg={6} className="d-flex">

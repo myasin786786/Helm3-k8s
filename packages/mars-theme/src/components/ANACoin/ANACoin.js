@@ -11,7 +11,7 @@ const ANACoin = () => {
       <div className="container">
         <div className="ana-coins">
           <div className="heading">
-            <h2>The ANA Coin</h2>
+            <h2>ANA Coin The Native Coin of Antlia</h2>
             <p>The ANA Coin is a unit of value that is native to the Antlia Blockchain. ARC based token can be generated using WASM based smart contract at Antlia Blockchain. Any asset can be used for the gas and rewards for staking. Currently,  ANA coin will be used for Gas and staking purpose  at Antlia Blockchain Network.</p>
           </div>
           <div className="coin-list">
