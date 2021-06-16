@@ -15,7 +15,7 @@ const DevTools = () => {
           <Col lg={6} md={12}>
             <div className="desc">
               <div className="content">
-                <h2>Antlia VM with developing tools</h2>
+                <h2>Antlia Virtual Machine (VM) with developing tools</h2>
                 <p>Antlia is a turing complete blockchain embedded with a VM to write smart contracts in web assembly. Antlia VM has a series of tooling to help developers community.</p>
                 <a
                   href="https://docs.antlia.io/"

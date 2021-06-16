@@ -31,7 +31,7 @@ const Consensus = () => {
           <Col lg={6} md={12}>
             <div className="desc">
               <div className="content">
-                <h2>Rollover PoS Consensus</h2>
+                <h2>Rollover Proof Of Stake (PoS) Consensus Algorithm</h2>
                 <p>
                   Antlia has proposed an approach to consensus called Rollover
                   Proof of Stake “rPoS” and its consensus engine is modified
