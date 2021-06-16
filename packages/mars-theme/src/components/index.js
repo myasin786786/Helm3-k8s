@@ -17,6 +17,7 @@ import Blog from "./Blog/Blog";
 import externalCss from "./index.css";
 import { websiteLink } from '../store/config';
 import { structuredData } from "../store/SEO/Homepage/structuredData";
+import Sitemap from "../components/Sitemap/Sitemap";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -53,6 +54,7 @@ const Theme = ({ state }) => {
         <meta name="robots" content="noodp, noydir, index, follow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <link rel="canonical" href={websiteLink} />
+        <link rel="alternate" hreflang="en" href={websiteLink} />
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
@@ -85,6 +87,7 @@ const Theme = ({ state }) => {
           <PageError when={data.isError} />
           <ComingSoon when={data.isStakeFlow || data.isAntliaFaucet || data.isAntliaWallet || data.isAntliaExplorer || data.isAntliaBlockchain || data.isAntliaExchange} />
           <Blog when={data.isBlog} />
+          <Sitemap when={data.isSitemap} />
           <Events when={data.isEvents} />
           <PrivacyPolicy when={data.isPrivacy} />
         </Switch>

@@ -12,7 +12,7 @@ const Interoperable = () => {
           <Col lg={6} md={12}>
             <div className="desc">
               <div className="content">
-                <h2>Interoperable</h2>
+                <h2>Antlia Interoperable Blockchain</h2>
                 <p>Blockchains are not only different because of their consensus but blockchain have different architecture design, many languages and framework to program, and different transaction structure.</p>
                 <a
                   href="https://docs.antlia.io/"
