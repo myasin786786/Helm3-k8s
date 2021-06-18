@@ -1,33 +1,36 @@
 import React from "react";
 import Link from "../link";
-import { Row, Col, Spinner } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import { Head } from "frontity";
+import { websiteLink } from "../../store/config";
 
 const Sitemap = () => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.antlia.io/sitemap/" />
+        <meta charSet="utf-8" />
+        <title>Sitemap</title>
+        <link rel="canonical" href={websiteLink + "/sitemap"} />
+        <link rel="alternate" hreflang="en-US" href={websiteLink + "/sitemap"} />
+        <link rel="alternate" hreflang="x-default" href={websiteLink + "/sitemap"} />
       </Head>
-
       <div className="blogs">
-      <div className="aboutbg">
-                <div className="container">
-                    <Row>
-                        <Col lg={2} />
-                        <Col lg={8} sm={12}>
-                            <div className="about-desc">
-                                <div>
-                                    <h2>Sitemap</h2>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={2} />
-                    </Row>
+        <div className="aboutbg">
+          <div className="container">
+            <Row>
+              <Col lg={2} />
+              <Col lg={8} sm={12}>
+                <div className="about-desc">
+                  <div>
+                    <h2>Sitemap</h2>
+                  </div>
                 </div>
-            </div>
+              </Col>
+              <Col lg={2} />
+            </Row>
+          </div>
+        </div>
       </div>
-
       <div className="container">
         <div className="banner">
           <div className="row">
@@ -43,13 +46,12 @@ const Sitemap = () => {
                   <li><Link link="/antlia-wallet">Antlia Wallet</Link></li>
                   <li><Link link="/antlia-explorer">Antlia Explorer</Link></li>
                 </ul>
-                  <h6 className="sitemap-head"><Link link="/blog">Blogs</Link></h6>
-                  <h6 className="sitemap-head"><Link link="/events">Events</Link></h6>
-                  <h6 className="sitemap-head"><Link link="/antlia-defi">Antlia DeFi</Link></h6>                  
-                  <h6 className="sitemap-head"><Link link="/privacy-policy">Privacy Policy</Link></h6>
-                  <h6 className="sitemap-head"><Link link="/antlia-blockchain">Antlia Blockchain</Link></h6>
-                  <h6 className="sitemap-head"><Link link="/antlia-exchange">Antlia Exchange</Link></h6>
-               
+                <h6 className="sitemap-head"><Link link="/blog">Blogs</Link></h6>
+                <h6 className="sitemap-head"><Link link="/events">Events</Link></h6>
+                <h6 className="sitemap-head"><Link link="/antlia-defi">Antlia DeFi</Link></h6>
+                <h6 className="sitemap-head"><Link link="/privacy-policy">Privacy Policy</Link></h6>
+                <h6 className="sitemap-head"><Link link="/antlia-blockchain">Antlia Blockchain</Link></h6>
+                <h6 className="sitemap-head"><Link link="/antlia-exchange">Antlia Exchange</Link></h6>
               </div>
             </div>
           </div>

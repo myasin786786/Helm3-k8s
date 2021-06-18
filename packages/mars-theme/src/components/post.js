@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, Head } from "frontity";
 import Link from "./link";
 import List from "./list";
 import FeaturedMedia from "./featured-media";
 import { structuredData } from "../store/SEO/Blog/structuredData";
 import { Row, Col } from "reactstrap";
+import { websiteLink } from "../store/config";
 
 const Post = ({ state, actions, libraries }) => {
   const [postType, setPostType] = useState(0);
@@ -34,9 +35,14 @@ const Post = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <>
-      <script className="structured-data-list" type="application/ld+json">
-        {structuredData(state)}
-      </script>
+      <Head>
+        <link rel="canonical" href={websiteLink + state.router.link} />
+        <link rel="alternate" hreflang="en-US" href={websiteLink + state.router.link} />
+        <link rel="alternate" hreflang="x-default" href={websiteLink + state.router.link} />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
+      </Head>
       <section className="blogs">
         <div className="aboutbg">
           <div className="container">

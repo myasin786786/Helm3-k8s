@@ -26,6 +26,15 @@ import Sitemap from "../components/Sitemap/Sitemap";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  Object.values(state.source.attachment).map((res) => {
+    state.source.attachment[res.id].link = "";
+    state.source.attachment[res.id].slug = "";
+  })
+  Object.values(state.source.data).map((type) => {
+    if (type.type === 'attachment') {
+      state.source.data[type.link] = Object
+    }
+  })
   // useEffect(() => {
   //   let name = 'antlia-web-frontity'
   //   let version = '1.0.1'
@@ -53,6 +62,7 @@ const Theme = ({ state }) => {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
         <meta name="robots" content="noodp, noydir, index, follow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
+        <meta name="keywords" content="Blockchain Technology, defi, defi staking, decentralized exchange, proof of stake, staked crypto, smart contract, smart contracts,defi crypto" />
         <link rel="canonical" href={websiteLink} />
         <link rel="alternate" hreflang="en" href={websiteLink} />
         <meta property="og:title" content={state.frontity.title} />
