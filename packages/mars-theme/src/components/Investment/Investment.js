@@ -1,20 +1,22 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
+import { Head } from "frontity";
 import antliainvest from '../../assets/antlia1-invest.png';
 import InvestmentForm from "../InvestmentForm/InvestmentForm";
-import { Helmet } from "react-helmet";
 import { websiteLink } from "../../store/config";
 
 const Investment = () => {
     return (
         <div className="w-100">
-            <Helmet>
+            <Head>
                 <meta charSet="utf-8" />
                 <title>Investment</title>
                 <link rel="canonical" href={websiteLink + "/investment"} />
+                <link rel="alternate" hreflang="en-US" href={websiteLink + "/investment"} />
+                <link rel="alternate" hreflang="x-default" href={websiteLink + "/investment"} />
                 <meta name="title" content="Invest in Antlia | An Incredible Investment opportunity " />
                 <meta name="description" content="Antlia is offering an incredible investment opportunity through this private sale. Antlia Network is seeking the right investors to help co-create the Blockchain-to- Blockchain and Blockchain-to-Oracle communication systems. As an investor, we see you as an important part of the community." />
-            </Helmet>
+            </Head>
             <section id="investment-banner">
                 <div className="container">
                     <div className="content-img">

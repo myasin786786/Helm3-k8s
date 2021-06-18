@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
+import { Head } from "frontity";
 import shakil from '../../assets/team/shakil.svg';
 import alqarni from '../../assets/team/alqarni.jpg';
 import alkatheiri from '../../assets/team/alkatheiri.jpeg';
@@ -23,20 +24,21 @@ import saifahmad from '../../assets/team/saifahmad.jpg';
 import amanullah from '../../assets/team/amanullah.jpg';
 import jawadahmed from '../../assets/team/jawadahmed.jpg';
 import ahmedtariq from '../../assets/team/ahmedtariq.jpg';
-import { Helmet } from "react-helmet";
 import ContactUs from "../ContactUs/ContactUs";
 import { websiteLink } from "../../store/config";
 
 const AboutUs = () => {
     return (
         <div className="w-100">
-            <Helmet>
+            <Head>
                 <meta charSet="utf-8" />
                 <title>About Us</title>
                 <link rel="canonical" href={websiteLink + "/about-us"} />
+                <link rel="alternate" hreflang="en-US" href={websiteLink + "/about-us"} />
+                <link rel="alternate" hreflang="x-default" href={websiteLink + "/about-us"} />
                 <meta name="title" content="Learn more about us and the team." />
                 <meta name="description" content="Antlia is committed to bringing huge improvement in blockchain speed, scale, cost and user experience. Our dedicated team of entrepreneurs, engineers and researchers are passionately working to achieve this goal." />
-            </Helmet>
+            </Head>
             <div id="about">
                 <div className="aboutbg">
                     <div className="container">

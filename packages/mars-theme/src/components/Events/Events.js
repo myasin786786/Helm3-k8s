@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { connect } from "frontity";
+import { connect, Head } from "frontity";
 import { Row, Col, Spinner } from "reactstrap";
 import FeaturedMedia from "../featured-media";
+import { websiteLink } from "../../store/config";
 
 const Events = ({ state, actions }) => {
   const [loading, setLoading] = useState(true)
@@ -22,79 +23,88 @@ const Events = ({ state, actions }) => {
     blogs()
   }, [data])
   return (
-    <section className="blogbg event" id="events">
-      <div className="blog-top">
-        <div className="aboutbg">
-          <div className="container">
-            <Row>
-              <Col lg={2} />
-              <Col lg={8} sm={12}>
-                <div className="about-desc">
-                  <div>
-                    <h2>Antlia Events</h2>
-                    <p>Through Antlia we give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user experience. To do this we’ve built a hardcore team of entrepreneurs, engineers and researchers with which we can literally build rockets.</p>
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <title>Events</title>
+        <link rel="canonical" href={websiteLink + "/events"} />
+        <link rel="alternate" hreflang="en-US" href={websiteLink + "/events"} />
+        <link rel="alternate" hreflang="x-default" href={websiteLink + "/events"} />
+      </Head>
+      <section className="blogbg event" id="events">
+        <div className="blog-top">
+          <div className="aboutbg">
+            <div className="container">
+              <Row>
+                <Col lg={2} />
+                <Col lg={8} sm={12}>
+                  <div className="about-desc">
+                    <div>
+                      <h2>Antlia Events</h2>
+                      <p>Through Antlia we give anyone, anywhere easy access to the digital economy, by bringing a 1000x improvement in blockchain speed, scale, cost and user experience. To do this we’ve built a hardcore team of entrepreneurs, engineers and researchers with which we can literally build rockets.</p>
+                    </div>
                   </div>
-                </div>
-              </Col>
-              <Col lg={2} />
-            </Row>
+                </Col>
+                <Col lg={2} />
+              </Row>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="event-list">
-          {loading ?
-            <div className="loadcontainer">
-              <Spinner className="spinloader" />
-            </div> :
-            data.length === 0 ?
+        <div className="container">
+          <div className="event-list">
+            {loading ?
               <div className="loadcontainer">
-                <h2>No Record Found...</h2>
-              </div>
-              :
-              <Row>
-                {data.map(({ type, id }, index) => {
-                  const item = state.source[type][id];
-                  const date = new Date(item.date).toLocaleDateString();
-                  return (
-                    <Col lg={4} md={6} sm={12}>
-                      <div className="blog-box" key={index} onClick={() => actions.router.set(item.link)} spy={true} smooth={true} duration={500}>
-                        <div className="blog-image">
-                          <div className="blog-img img-hover-zoom--slowmo">
-                            {state.theme.featured.showOnList && (
-                              <FeaturedMedia id={item.featured_media} />
-                            )}
-                          </div>
-                        </div>
-                        <div className="blog-content">
-                          <h4>{item.title.rendered}</h4>
-                          <div className="likes-date">
-                            <div className="date">
-                              <p>{date}</p>
+                <Spinner className="spinloader" />
+              </div> :
+              data.length === 0 ?
+                <div className="loadcontainer">
+                  <h2>No Record Found...</h2>
+                </div>
+                :
+                <Row>
+                  {data.map(({ type, id }, index) => {
+                    const item = state.source[type][id];
+                    const date = new Date(item.date).toLocaleDateString();
+                    return (
+                      <Col lg={4} md={6} sm={12}>
+                        <div className="blog-box" key={index} onClick={() => actions.router.set(item.link)} spy={true} smooth={true} duration={500}>
+                          <div className="blog-image">
+                            <div className="blog-img img-hover-zoom--slowmo">
+                              {state.theme.featured.showOnList && (
+                                <FeaturedMedia id={item.featured_media} />
+                              )}
                             </div>
                           </div>
-                          <p className="desc"><div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div></p>
-                        </div>
-                        <div className="blog-footer">
-                          <div className="moreblog">
-                            <button
-                              onClick={() => actions.router.set(item.link)}
-                              className="blogbtn"
-                            >
-                              Read More
+                          <div className="blog-content">
+                            <h4>{item.title.rendered}</h4>
+                            <div className="likes-date">
+                              <div className="date">
+                                <p>{date}</p>
+                              </div>
+                            </div>
+                            <p className="desc"><div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div></p>
+                          </div>
+                          <div className="blog-footer">
+                            <div className="moreblog">
+                              <button
+                                onClick={() => actions.router.set(item.link)}
+                                className="blogbtn"
+                              >
+                                Read More
                               </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Col>
-                  )
-                }
-                )}
-              </Row>
-          }
+                      </Col>
+                    )
+                  }
+                  )}
+                </Row>
+            }
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
