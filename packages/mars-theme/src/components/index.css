@@ -11841,7 +11841,7 @@ nav {
 /* ANA Coins Component Styles */
 
 #ana-coin {
-  padding: 5rem 0 3rem;
+  padding: 2rem 0 3rem;
   width: 100%;
 }
 #ana-coin .ana-coins {
@@ -12029,6 +12029,112 @@ nav {
     padding: 3rem 0 0 !important;
   }
   #tech-map .tech-roadmap img {
+    max-width: 100%;
+  }
+}
+
+/* Media Component Styles */
+
+#media {
+  padding: 0 0 1.5rem;
+  width: 100%;
+}
+#media .ana-coins {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#media .ana-coins p {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-align: center;
+  color: #848688;
+  width: 100%;
+}
+#media .ana-coins .heading {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#media .ana-coins .heading h2 {
+  /* font-family: "Mark Pro Book"; */
+  text-align: center;
+  margin: 0 0 1.5rem;
+  font-size: 2.5rem;
+  letter-spacing: normal;
+  color: #141413;
+  text-transform: capitalize;
+  width: 100%;
+}
+#media .ana-coins .coin-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem 0 0;
+}
+#media .ana-coins .coin-list .single-item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 16.5%;
+  padding: 1rem;
+  border-radius: 15px;
+  transition: 1s;
+  -webkit-box-shadow: -61px 0px 168px -67px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -61px 0px 168px -67px rgba(0, 0, 0, 0.34);
+  box-shadow: -61px 0px 168px -67px rgba(0, 0, 0, 0.34);
+}
+#media .ana-coins .coin-list .single-item .img-box {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#media .ana-coins .coin-list .single-item img {
+  width: 100%;
+}
+/* #media .ana-coins .coin-list .single-item:hover {
+  margin-top: -1rem;
+} */
+
+@media (max-width: 991px) {
+  #media .ana-coins .coin-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #media .ana-coins .coin-list .single-item {
+    width: 33%;
+  }
+}
+
+@media (max-width: 767px) {
+  #media .ana-coins .coin-list .single-item {
+    width: 50%;
+  }
+  #media .ana-coins .coin-list .single-item img {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #media {
+    padding: 3rem 0;
+  }
+  #media .ana-coins .coin-list {
+    margin: 0;
+  }
+  #media .ana-coins .coin-list .single-item {
+    width: 100%;
+  }
+  #media .ana-coins .coin-list .single-item img {
     max-width: 100%;
   }
 }

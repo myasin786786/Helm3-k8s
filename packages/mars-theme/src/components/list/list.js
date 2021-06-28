@@ -9,6 +9,7 @@ import DevTools from './../DevTools/DevTools';
 import Interoperable from './../Interoperable/Interoperable';
 import SmartContract from './../SmartContract/SmartContract';
 import ANACoin from './../ANACoin/ANACoin';
+import MediaPartners from './../MediaPartners/MediaPartners';
 import TechnicalRoadMap from './../TechnicalRoadmap/TechnicalRoadmap';
 
 const List = () => {
@@ -25,6 +26,7 @@ const List = () => {
       <SmartContract />
       <ANACoin />
       <TechnicalRoadMap />
+      <MediaPartners />
       {/* <Footer /> */}
     </>
     // <Container>
