@@ -1,9 +1,9 @@
 import React from "react";
 import Bitcoin from '../../assets/logos/bitcoin.png';
-import BusinessInsider from '../../assets/logos/Business-Insider-logo.jpg';
+import BusinessInsider from '../../assets/logos/Business-Insider-logo.png';
 import CoinTelegraph from '../../assets/logos/cointelegraph.png';
 import CryptoNews from '../../assets/logos/cryptonews.png';
-import MarketWatch from '../../assets/logos/marketWatch.jpg';
+import MarketWatch from '../../assets/logos/marketWatch.png';
 import YahooFinance from '../../assets/logos/yahooFinance.png';
 
 const MediaPartners = () => {
