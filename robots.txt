@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: https://wp.antlia.io/
+
 Allow: /
 # Sitemap files
 Sitemap: https://www.antlia.io/sitemap.xml
