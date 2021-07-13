@@ -28,7 +28,7 @@ const OurPartners = () => {
             </div>
             <div className="single-item">
               <div className="img-box">
-                <a href="https://trustedchain.it/en/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.trustedchain.io/" target="_blank" rel="noopener noreferrer">
                   <img src={TrustedChain} alt="Trusted Chain" />
                 </a>
               </div>
