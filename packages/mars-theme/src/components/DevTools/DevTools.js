@@ -23,7 +23,7 @@ const DevTools = () => {
                   rel="noopener noreferrer"
                 >
                   Read more Antlia VM with Dev tools
-                    </a>
+                </a>
               </div>
             </div>
           </Col>

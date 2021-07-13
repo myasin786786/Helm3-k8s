@@ -14880,3 +14880,7 @@ width: 100%; }
                     .sitemap-head a {
                       color: blue;
                     }
+
+                    .ourPartners {
+                      justify-content: center !important;
+                    }

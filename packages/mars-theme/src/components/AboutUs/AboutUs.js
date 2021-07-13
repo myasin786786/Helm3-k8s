@@ -12,16 +12,12 @@ import waqas from '../../assets/team/waqas.jpg';
 import bilal from '../../assets/team/bilal.jpg';
 import ehtsham from '../../assets/team/ehtsham.jpg';
 import sarmad from '../../assets/team/sarmad.jpg';
-import aniq from '../../assets/team/aniq.jpg';
 import inayat from '../../assets/team/inayat.jpg';
 import fasih from '../../assets/team/fasih.jpg';
 import hamza from '../../assets/team/hamza.jpg';
-import rashid from '../../assets/team/rashid.jpg';
 import waqar from '../../assets/team/waqar.jpg';
-import abasit from '../../assets/team/abasit.jpg';
 import danyal from '../../assets/team/danyal.jpg';
 import saifahmad from '../../assets/team/saifahmad.jpg';
-import amanullah from '../../assets/team/amanullah.jpg';
 import jawadahmed from '../../assets/team/jawadahmed.jpg';
 import ahmedtariq from '../../assets/team/ahmedtariq.jpg';
 import ContactUs from "../ContactUs/ContactUs";
@@ -177,7 +173,7 @@ const AboutUs = () => {
                                             <img src={waqas} alt="Waqas Hakeem Blockchain" />
                                         </div>
                                     </div>
-                                    <h4>Front End Developer</h4>
+                                    <h4>Software Engineer</h4>
                                     <h2>Waqas Hakeem</h2>
                                 </div>
                             </Col>
@@ -191,7 +187,7 @@ const AboutUs = () => {
                                             <img src={bilal} alt="Bilal Asif Blockchain" />
                                         </div>
                                     </div>
-                                    <h4>Front End Developer</h4>
+                                    <h4>Software Engineer</h4>
                                     <h2>Bilal Asif</h2>
                                 </div>
                             </Col>
@@ -221,20 +217,6 @@ const AboutUs = () => {
                                     </div>
                                     <h4>Operations Manager</h4>
                                     <h2>Khawaja Sarmad Javaid</h2>
-                                </div>
-                            </Col>
-                            <Col lg={4} md={6} sm={6} xs={12}>
-                                <div className="single-item">
-                                    <div className="team-img">
-                                        <a href="https://www.linkedin.com/in/aniqmir/" target="_blank" rel="noopener noreferrer">
-                                            <i className="fa fa-linkedin"></i>
-                                        </a>
-                                        <div className="link-cont">
-                                            <img src={aniq} alt="Muhammad Aniq Mir Blockchain" />
-                                        </div>
-                                    </div>
-                                    <h4>Software Engineer</h4>
-                                    <h2>Muhammad Aniq Mir</h2>
                                 </div>
                             </Col>
                             <Col lg={4} md={6} sm={6} xs={12}>
@@ -282,20 +264,6 @@ const AboutUs = () => {
                             <Col lg={4} md={6} sm={6} xs={12}>
                                 <div className="single-item">
                                     <div className="team-img">
-                                        <a href="https://www.linkedin.com/in/muhammad-rashid-9b5b531b6/" target="_blank" rel="noopener noreferrer">
-                                            <i className="fa fa-linkedin"></i>
-                                        </a>
-                                        <div className="link-cont">
-                                            <img src={rashid} alt="Muhammad Rashid Blockchain" />
-                                        </div>
-                                    </div>
-                                    <h4>Mobile App Developer</h4>
-                                    <h2>Muhammad Rashid</h2>
-                                </div>
-                            </Col>
-                            <Col lg={4} md={6} sm={6} xs={12}>
-                                <div className="single-item">
-                                    <div className="team-img">
                                         <a href="https://www.linkedin.com/in/waqar-ahmed-0aa90a1ab/" target="_blank" rel="noopener noreferrer">
                                             <i className="fa fa-linkedin"></i>
                                         </a>
@@ -305,20 +273,6 @@ const AboutUs = () => {
                                     </div>
                                     <h4>Backend Developer</h4>
                                     <h2>Waqar Ahmed</h2>
-                                </div>
-                            </Col>
-                            <Col lg={4} md={6} sm={6} xs={12}>
-                                <div className="single-item">
-                                    <div className="team-img">
-                                        <a href="https://www.linkedin.com/in/abdul-basit-20343a1ba" target="_blank" rel="noopener noreferrer">
-                                            <i className="fa fa-linkedin"></i>
-                                        </a>
-                                        <div className="link-cont">
-                                            <img src={abasit} alt="Abdul Basit Blockchain" />
-                                        </div>
-                                    </div>
-                                    <h4>Junior Backend Developer</h4>
-                                    <h2>Abdul Basit</h2>
                                 </div>
                             </Col>
                             <Col lg={4} md={6} sm={6} xs={12}>
@@ -347,20 +301,6 @@ const AboutUs = () => {
                                     </div>
                                     <h4>UI/UX & Graphic Designer</h4>
                                     <h2>Saifullah Ahmed</h2>
-                                </div>
-                            </Col>
-                            <Col lg={4} md={6} sm={6} xs={12}>
-                                <div className="single-item">
-                                    <div className="team-img">
-                                        <a href="https://www.linkedin.com/in/aman68" target="_blank" rel="noopener noreferrer">
-                                            <i className="fa fa-linkedin"></i>
-                                        </a>
-                                        <div className="link-cont">
-                                            <img src={amanullah} alt="Aman Ullah Blockchain" />
-                                        </div>
-                                    </div>
-                                    <h4>Back End Developer</h4>
-                                    <h2>Aman Ullah</h2>
                                 </div>
                             </Col>
                             <Col lg={4} md={6} sm={6} xs={12}>
