@@ -133,7 +133,7 @@ class InvestmentForm extends React.Component {
                       <div className="info-box">
                         <h1>
                           Antlia Investment Form
-                          </h1>
+                        </h1>
                         <p>This investment form is for private sale only. If you are interested in investing in Antlia, fill up the following form: </p>
                       </div>
                       <Form >

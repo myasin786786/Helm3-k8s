@@ -132,14 +132,15 @@ class ContactUs extends React.Component {
                       <div className="info-box">
                         <h2>
                           Contact Us
-                          </h2>
+                        </h2>
                         <p>Antlia is committed to protecting  and respecting
-                        your privacy, and we'll only use  your personal
-                        information to provide the services  you
-                        requested from us. Antlia team would like to
-                        contact you about our products and services,
-                        well as other content that may be of interest
-                        to you. If you consent to us, please contact you.</p>
+                          your privacy, and we'll only use  your personal
+                          information to provide the services  you
+                          requested from us. Antlia team would like to
+                          contact you about our products and services,
+                          well as other content that may be of interest
+                          to you. If you consent to us, please contact you.
+                        </p>
                       </div>
                     </div>
                   </Col>
