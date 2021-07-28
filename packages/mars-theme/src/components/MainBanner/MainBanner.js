@@ -16,7 +16,7 @@ const MainBanner = () => {
               </p>
               <a href="https://docs.antlia.io/"
                 target="_blank"
-                rel="noopener noreferrer" className="learn-more">Learn More &nbsp;
+                rel="noopener noreferrer" className="learn-more">Read More &nbsp;
               </a>
             </div>
           </div>

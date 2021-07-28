@@ -5,7 +5,7 @@ import TrustedChain from '../../assets/logos/trusted_chain.png';
 
 const OurPartners = () => {
   return (
-    <section id="media">
+    <section id="ourPartners">
       <div className="container">
         <div className="ana-coins">
           <div className="heading">
