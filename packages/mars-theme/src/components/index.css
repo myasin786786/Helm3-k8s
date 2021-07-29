@@ -9502,6 +9502,7 @@ nav {
 .chain .content-in img {
   margin: 1rem 0;
   width: 100px;
+  height: auto;
 }
 .chain .content-in .chain-list {
   display: flex;

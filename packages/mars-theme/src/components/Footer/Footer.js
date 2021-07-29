@@ -18,7 +18,7 @@ const Footer = (props) => {
         <Row>
           <Col lg={3} md={12} sm={12}>
             <div className="copyright">
-              <img src={logo} alt="Antlia" />
+              <img  height="auto" width="100%" src={logo} alt="Antlia" />
               <p>Antlia develop with love by <a href="https://www.rnssol.com/" target="_blank" rel="noopener noreferrer">RNS Solutions</a> Labs.</p>
             </div>
           </Col>

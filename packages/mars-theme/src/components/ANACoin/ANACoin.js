@@ -17,31 +17,31 @@ const ANACoin = () => {
           <div className="coin-list">
             <div className="single-item">
               <div className="img-box">
-                <img src={Governace} alt="Governance" />
+                <img height="auto" width="100%" src={Governace} alt="Governance" />
               </div>
               <p>Governance</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={Staking} alt="Stacking" />
+                <img height="auto" width="100%" src={Staking} alt="Stacking" />
               </div>
               <p>Stacking</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={Transaction} alt="Transactions" />
+                <img height="auto" width="100%" src={Transaction} alt="Transactions" />
               </div>
               <p>Transactions</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={SmartContract} alt="Smart Contracts" />
+                <img height="auto" width="100%" src={SmartContract} alt="Smart Contracts" />
               </div>
               <p>Smart Contracts</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={Validator} alt="Validator Rewards" />
+                <img height="auto" width="100%" src={Validator} alt="Validator Rewards" />
               </div>
               <p>Validator Rewards</p>
             </div>

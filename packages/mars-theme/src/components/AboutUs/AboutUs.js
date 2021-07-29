@@ -62,7 +62,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={shakil} alt="Sir Dr. Shakil Muhammad Ph,D Blockchain" />
+                                            <img height="auto" width="100%" src={shakil} alt="Sir Dr. Shakil Muhammad Ph,D Blockchain" />
                                         </div>
                                     </div>
                                     <h4>CEO</h4>
@@ -79,7 +79,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={alqarni} alt="Sir Dr. Alqarni Blockchain" />
+                                            <img height="auto" width="100%" src={alqarni} alt="Sir Dr. Alqarni Blockchain" />
                                         </div>
                                     </div>
                                     <h4>COO</h4>
@@ -95,7 +95,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={alkatheiri} alt="Sir Dr. Mohammad Alkatheiri Blockchain" />
+                                            <img height="auto" width="100%" src={alkatheiri} alt="Sir Dr. Mohammad Alkatheiri Blockchain" />
                                         </div>
                                     </div>
                                     <h4>CIO</h4>
@@ -114,7 +114,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={sajjad} alt="Sir Dr. Sajjad Hussain Blockchain" />
+                                            <img height="auto" width="100%" src={sajjad} alt="Sir Dr. Sajjad Hussain Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Senior Researcher</h4>
@@ -128,7 +128,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={shehroze} alt="Sir Shehroze Blockchain" />
+                                            <img height="auto" width="100%" src={shehroze} alt="Sir Shehroze Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Chief Marketing Officer</h4>
@@ -142,7 +142,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={faisal} alt="Faisal Naveed Blockchain" />
+                                            <img height="auto" width="100%" src={faisal} alt="Faisal Naveed Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Chief Technical Officer</h4>
@@ -156,7 +156,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={ali} alt="Muhammad Ali Blockchain" />
+                                            <img height="auto" width="100%" src={ali} alt="Muhammad Ali Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Design Director</h4>
@@ -170,7 +170,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={waqas} alt="Waqas Hakeem Blockchain" />
+                                            <img height="auto" width="100%" src={waqas} alt="Waqas Hakeem Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Software Engineer</h4>
@@ -184,7 +184,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={bilal} alt="Bilal Asif Blockchain" />
+                                            <img height="auto" width="100%" src={bilal} alt="Bilal Asif Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Software Engineer</h4>
@@ -198,7 +198,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={ehtsham} alt="Ehtsham Anwaar Blockchain" />
+                                            <img height="auto" width="100%" src={ehtsham} alt="Ehtsham Anwaar Blockchain" />
                                         </div>
                                     </div>
                                     <h4>SQA Engineer</h4>
@@ -212,7 +212,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={sarmad} alt="Khawaja Sarmad Javaid Blockchain" />
+                                            <img height="auto" width="100%" src={sarmad} alt="Khawaja Sarmad Javaid Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Operations Manager</h4>
@@ -226,7 +226,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={inayat} alt="Inayat Ullah Blockchain" />
+                                            <img height="auto" width="100%" src={inayat} alt="Inayat Ullah Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Front End Developer</h4>
@@ -240,7 +240,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={fasih} alt="Muhammad Fasih Mughal Blockchain" />
+                                            <img height="auto" width="100%" src={fasih} alt="Muhammad Fasih Mughal Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Digital Marketing Expert</h4>
@@ -254,7 +254,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={hamza} alt="Hamza Ahmed Blockchain" />
+                                            <img height="auto" width="100%" src={hamza} alt="Hamza Ahmed Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Front End Developer</h4>
@@ -268,7 +268,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={waqar} alt="Waqar Ahmed Blockchain" />
+                                            <img height="auto" width="100%" src={waqar} alt="Waqar Ahmed Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Backend Developer</h4>
@@ -282,7 +282,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={danyal} alt="Daniyal Butt Blockchain" />
+                                            <img height="auto" width="100%" src={danyal} alt="Daniyal Butt Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Digital Marketing Expert</h4>
@@ -296,7 +296,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={saifahmad} alt="Saifullah Ahmed Blockchain" />
+                                            <img height="auto" width="100%" src={saifahmad} alt="Saifullah Ahmed Blockchain" />
                                         </div>
                                     </div>
                                     <h4>UI/UX & Graphic Designer</h4>
@@ -310,7 +310,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={jawadahmed} alt="Jawad Ahmed Blockchain" />
+                                            <img height="auto" width="100%" src={jawadahmed} alt="Jawad Ahmed Blockchain" />
                                         </div>
                                     </div>
                                     <h4>Mobile App Developer</h4>
@@ -324,7 +324,7 @@ const AboutUs = () => {
                                             <i className="fa fa-linkedin"></i>
                                         </a>
                                         <div className="link-cont">
-                                            <img src={ahmedtariq} alt="Ahmed Tariq Blockchain" />
+                                            <img height="auto" width="100%" src={ahmedtariq} alt="Ahmed Tariq Blockchain" />
                                         </div>
                                     </div>
                                     <h4>SQA Engineer</h4>

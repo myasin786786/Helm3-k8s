@@ -29,7 +29,7 @@ const Investment = () => {
                             </div>
                         </div>
                         <div className="banner-image">
-                            <img src={antliainvest} alt="antlia investment" />
+                            <img height="auto" width="100%" src={antliainvest} alt="antlia investment" />
                         </div>
                     </div>
                 </div>

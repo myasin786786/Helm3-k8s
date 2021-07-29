@@ -20,7 +20,7 @@ const DevToolTabs = () => {
             className={classnames({ active: activeTab === '1' })}
             onClick={() => { toggle('1'); }}
           >
-            <img src={golang} alt="Golang" className="lang-img" />
+            <img height="auto" width="20px" src={golang} alt="Golang" className="lang-img" />
             <span>Go</span>
           </NavLink>
         </NavItem>
@@ -29,7 +29,7 @@ const DevToolTabs = () => {
             className={classnames({ active: activeTab === '2' })}
             onClick={() => { toggle('2'); }}
           >
-            <img src={node} alt="Node JS" className="lang-img" />
+            <img height="auto" width="20px" src={node} alt="Node JS" className="lang-img" />
             <span>Node</span>
           </NavLink>
         </NavItem>
@@ -38,7 +38,7 @@ const DevToolTabs = () => {
             className={classnames({ active: activeTab === '3' })}
             onClick={() => { toggle('3'); }}
           >
-            <img src={rust} alt="Rust" className="lang-img" />
+            <img height="auto" width="20px" src={rust} alt="Rust" className="lang-img" />
             <span>Rust</span>
           </NavLink>
         </NavItem>

@@ -15,21 +15,21 @@ const OurPartners = () => {
             <div className="single-item">
               <div className="img-box">
                 <a href="https://www.creativedestructionlab.com/" target="_blank" rel="noopener noreferrer">
-                  <img src={CreativeDestructionLab} alt="Creative Destruction Lab" />
+                  <img height="auto" width="100%" src={CreativeDestructionLab} alt="Creative Destruction Lab" />
                 </a>
               </div>
             </div>
             <div className="single-item">
               <div className="img-box">
                 <a href="https://www.rnssol.com/" target="_blank" rel="noopener noreferrer">
-                  <img src={RNS} alt="RNS Solutions" />
+                  <img height="auto" width="100%" src={RNS} alt="RNS Solutions" />
                 </a>
               </div>
             </div>
             <div className="single-item">
               <div className="img-box">
                 <a href="https://www.trustedchain.io/" target="_blank" rel="noopener noreferrer">
-                  <img src={TrustedChain} alt="Trusted Chain" />
+                  <img height="auto" width="100%" src={TrustedChain} alt="Trusted Chain" />
                 </a>
               </div>
             </div>
