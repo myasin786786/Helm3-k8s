@@ -9,7 +9,7 @@ const Consensus = () => {
         <Row>
           <Col lg={6} md={12}>
             <div className="side-img particles">
-              <img src={ConsensusEngine} alt="Consensus Engine" />
+              <img height="auto" width="100%" src={ConsensusEngine} alt="Consensus Engine" />
               <div className="dot-container">
                 <div className="dot-in">
                   <div className="dot-one">

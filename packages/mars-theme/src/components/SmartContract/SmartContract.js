@@ -32,6 +32,8 @@ const SmartContract = () => {
               <div className="dot dot3" />
               <div className="dot dot4" />
               <img
+                height="auto"
+                width="100%"
                 src={circle}
                 className="circle-move"
                 alt="Circle"
@@ -42,9 +44,9 @@ const SmartContract = () => {
                   <div className="mover-1"></div>
                 </div>
               </div>
-              <img src={deskview} alt="Smart Contract" className="res-view" />
-              <img src={scdottedline} alt="Smart Contract" className="sc-dot-line" />
-              <img src={sccoins} alt="Smart Contract" className="sc-coins" />
+              <img height="auto" width="auto" src={deskview} alt="Smart Contract" className="res-view" />
+              <img height="auto" width="auto" src={scdottedline} alt="Smart Contract" className="sc-dot-line" />
+              <img height="auto" width="auto" src={sccoins} alt="Smart Contract" className="sc-coins" />
             </div>
           </Col>
         </Row>

@@ -16,13 +16,13 @@ const MainBanner = () => {
               </p>
               <a href="https://docs.antlia.io/"
                 target="_blank"
-                rel="noopener noreferrer" className="learn-more">Learn More &nbsp;
+                rel="noopener noreferrer" className="learn-more">Read More &nbsp;
               </a>
             </div>
           </div>
           <div className="banner-image">
-            <img src={AntliaChain} alt="Antlia Chains" className="ant-chains" />
-            <img src={AntliaNodes} className="vert-move" alt="Antlia Nodes" />
+            <img height="100%" width="100%" src={AntliaChain} alt="Antlia Chains" className="ant-chains" />
+            <img height="100%" width="100%" src={AntliaNodes} className="vert-move" alt="Antlia Nodes" />
           </div>
         </div>
       </div>

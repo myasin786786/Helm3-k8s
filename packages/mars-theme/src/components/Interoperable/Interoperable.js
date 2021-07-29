@@ -36,9 +36,9 @@ const Interoperable = () => {
                 <div className="dot dot5" />
                 <div className="dot dot6" />
               </div>
-              <img src={interopeline} className="int-dot-line" alt="Interoperable Interoperate Data interoperability Interoperability in software engineering " />
-              <img src={interopecoin} className="int-coins" alt="Database interoperability Enterprise interoperability Digital interoperability Global interoperability" />
-              <img src={Interoperables} className="res-view" alt="Interoperable Interoperate Data interoperability Interoperability in software engineering Database interoperability Enterprise interoperability Digital interoperability Global interoperability" />
+              <img height="auto" width="auto" src={interopeline} className="int-dot-line" alt="Interoperable Interoperate Data interoperability Interoperability in software engineering " />
+              <img height="auto" width="auto" src={interopecoin} className="int-coins" alt="Database interoperability Enterprise interoperability Digital interoperability Global interoperability" />
+              <img height="auto" width="auto" src={Interoperables} className="res-view" alt="Interoperable Interoperate Data interoperability Interoperability in software engineering Database interoperability Enterprise interoperability Digital interoperability Global interoperability" />
             </div>
           </Col>
         </Row>

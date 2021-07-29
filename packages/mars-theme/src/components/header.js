@@ -76,8 +76,8 @@ class MainNavbar extends React.Component {
           <Navbar id="navbar" light expand="md">
             <div className="container">
               <NavbarBrand tag={Link} link="/" onClick={scrollToTop}>
-                <img src={logoWhite} alt="Antlia logo" className="logodes" />
-                <img src={logoColored} alt="Antlia logo" className="logores" />
+                <img height="auto" width="100%" src={logoWhite} alt="Antlia logo" className="logodes" />
+                <img height="auto" width="100%" src={logoColored} alt="Antlia logo" className="logores" />
               </NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
@@ -150,19 +150,19 @@ class MainNavbar extends React.Component {
                           <div className="chain-list">
                             <Link link="/antlia-faucet"
                               className="single-item">
-                              <img src={faucet} alt="Antlia Faucet" />
+                              <img height="auto" width="100px" src={faucet} alt="Antlia Faucet" />
                               <h4>Antlia Faucet<i className="fa fa-external-link"></i></h4>
                               <p>Antlia faucet will give the user a small amount of  ANA coins for testing and better understanding of the system.</p>
                             </Link>
                             <Link link="/antlia-wallet"
                               className="single-item">
-                              <img src={wallet} alt="Antlia Wallet" />
+                              <img height="auto" width="100px" src={wallet} alt="Antlia Wallet" />
                               <h4>Antlia Wallet <i className="fa fa-external-link"></i></h4>
                               <p>Antlia's Multicoin Wallet will be non-custodial wallet having support for ANA and BNB coin. It will be in variety of versions, mobile, web, browser, extension & nano ledger.</p>
                             </Link>
                             <Link link="/antlia-explorer"
                               className="single-item">
-                              <img src={explorer} alt="Antlia Explorer" />
+                              <img height="auto" width="100px" src={explorer} alt="Antlia Explorer" />
                               <h4>Antlia Explorer <i className="fa fa-external-link"></i></h4>
                               <p>Antlia Multichain Explorer will monitor the status of different metrics of Antlia network specifically ANA and BNA Coin.</p>
                             </Link>

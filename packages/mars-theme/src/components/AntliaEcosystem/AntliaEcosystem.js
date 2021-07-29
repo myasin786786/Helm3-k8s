@@ -19,31 +19,31 @@ const AntliaEcosystem = () => {
           <div className="system-list">
             <div className="single-item">
               <div className="img-box">
-                <img src={DAppDev} alt="Dapp Developers" />
+                <img height="100%" width="100%" src={DAppDev} alt="Dapp Developers" />
               </div>
               <p>Dapp Developers</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={Validator} alt="Validator" />
+                <img height="100%" width="100%" src={Validator} alt="Validator" />
               </div>
               <p>Validator</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={Investor} alt="Investors" />
-              </div>
+                <img height="100%" width="100%" src={Investor} alt="Investors" />
+              </div> 
               <p>Investors</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={Government} alt="Government/ Enterprises" />
+                <img height="100%" width="100%" src={Government} alt="Government/ Enterprises" />
               </div>
               <p>Government/ Enterprises</p>
             </div>
             <div className="single-item">
               <div className="img-box">
-                <img src={Academia} alt="Academia" />
+                <img height="100%" width="100%" src={Academia} alt="Academia" />
               </div>
               <p>Academia</p>
             </div>
