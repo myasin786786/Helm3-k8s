@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ .Release.Name }}-config
-data:
-  MONGO_HOSTNAME: " MONGO_HOSTNAME: 192.168.88.175.rs0,192.168.88.127.rs0"
-  MONGO_PORT: "27017"
-  MONGO_DB: "ReplicationTestDB"
-  MONGO_REPLICASET: "rs0"

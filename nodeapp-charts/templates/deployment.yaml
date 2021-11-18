@@ -5,68 +5,22 @@ metadata:
   labels:
     {{- include "nodeapp-charts.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
-  {{- end }}
   selector:
     matchLabels:
       {{- include "nodeapp-charts.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
-      annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
         {{- include "nodeapp-charts.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      serviceAccountName: {{ include "nodeapp-charts.serviceAccountName" . }}
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-- name: MONGO_USERNAME
-          valueFrom:
-            secretKeyRef:
-              key: MONGO_USERNAME
-              name: {{ .Release.Name }}-auth
-        - name: MONGO_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              key: MONGO_PASSWORD
-              name: {{ .Release.Name }}-auth
-        - name: MONGO_HOSTNAME
-          valueFrom:
-            configMapKeyRef:
-              key: MONGO_HOSTNAME
-              name: {{ .Release.Name }}-config
-        - name: MONGO_PORT
-          valueFrom:
-            configMapKeyRef:
-              key: MONGO_PORT
-              name: {{ .Release.Name }}-config
-        - name: MONGO_DB
-          valueFrom:
-            configMapKeyRef:
-              key: MONGO_DB
-              name: {{ .Release.Name }}-config
-        - name: MONGO_REPLICASET
-          valueFrom:
-            configMapKeyRef:
-              key: MONGO_REPLICASET
-              name: {{ .Release.Name }}-config
+          imagenetworking.k8s.io/v1PullPolicy: {{ .Values.image.imagepullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: {{ .Values.service.targetPort }}
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -78,15 +32,4 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      {{- with .Values.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.affinity }}
-      affinity:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.tolerations }}
-      tolerations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+

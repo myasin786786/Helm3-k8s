@@ -3,7 +3,7 @@ port: 27017
 replicaSetName: db
 podDisruptionBudget: {}
 auth:
-  enabled: true
+  enabled: false
   existingKeySecret: keyfilesecret
   existingAdminSecret: mongo-secret
 imagePullSecrets: []
@@ -17,11 +17,11 @@ copyConfigImage:
   pullPolicy: Always
 image:
   repository: mongo
-  tag: 4.1.9
+  tag: 4
   pullPolicy: Always
 extraVars: {}
 metrics:
-  enabled: false
+  enabled: true
   image:
     repository: ssalaues/mongodb-exporter
     tag: 0.6.1
